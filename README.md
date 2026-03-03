@@ -16,8 +16,8 @@ For the cross-paper map and current series links, start here:
 
 ## Current manuscript snapshot
 
-- Source: `manuscript/current/nrr-boundary_manuscript_v14.tex`
-- PDF: `manuscript/current/nrr-boundary_manuscript_v14.pdf`
+- Source: `manuscript/current/nrr-boundary_manuscript_v15.tex`
+- PDF: `manuscript/current/nrr-boundary_manuscript_v15.pdf`
 - Figures used by manuscript:
   - `manuscript/current/stageb_provider_separated_heatmaps_v9_readable.png`
   - `manuscript/current/fig_provider_separated_heatmaps_v9_readable.png`
@@ -56,8 +56,8 @@ nrr-boundary/
 |-- reproducibility.md
 |-- manuscript/
 |   `-- current/
-|       |-- nrr-boundary_manuscript_v14.tex
-|       |-- nrr-boundary_manuscript_v14.pdf
+|       |-- nrr-boundary_manuscript_v15.tex
+|       |-- nrr-boundary_manuscript_v15.pdf
 |       |-- stageb_provider_separated_heatmaps_v9_readable.png
 |       |-- fig_provider_separated_heatmaps_v9_readable.png
 |       |-- stageb_sign_flip_boundaries.png
