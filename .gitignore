@@ -1,0 +1,17 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+# TeX intermediates
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.xdv
+
+# Local envs
+.env
+.venv/

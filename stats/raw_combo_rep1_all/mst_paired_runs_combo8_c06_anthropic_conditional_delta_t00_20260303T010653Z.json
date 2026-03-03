@@ -1,0 +1,2764 @@
+{
+  "meta": {
+    "generated_at_utc": "20260303T010653Z",
+    "config": "configs/calibration_l8/experiment_mst_l8_c06.yaml",
+    "prompt_file": "configs/prompt_pairs_mst_v1.yaml",
+    "turn_input_template_file": "configs/calibration_l8/turn_input_templates_mst_l8_c06.yaml",
+    "template_set": "main",
+    "providers": [
+      "anthropic"
+    ],
+    "patterns": [
+      "conditional_delta"
+    ],
+    "temperatures": [
+      0.0
+    ],
+    "reps": 1,
+    "dry_run": false,
+    "max_pairs": null
+  },
+  "pairs": [
+    {
+      "pair_index": 1,
+      "provider": "anthropic",
+      "template_id": "S_STABLE_MAIN_01",
+      "scenario_id": "S_STABLE_01",
+      "pattern": "conditional_delta",
+      "temperature": 0.0,
+      "rep": 1,
+      "arm_order": [
+        "baseline",
+        "conditional_delta"
+      ],
+      "arms": {
+        "baseline": {
+          "provider": "anthropic",
+          "model": "claude-sonnet-4-20250514",
+          "policy": "baseline",
+          "temperature": 0.0,
+          "scenario_id": "S_STABLE_01",
+          "template_id": "S_STABLE_MAIN_01",
+          "turns": [
+            {
+              "turn": 1,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"latency\", \"traceability\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Initial state setup complete with all required fields\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.goal\", \"old\": null, \"new\": \"Prepare a weekly QA migration plan\", \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.deadline_day\", \"old\": null, \"new\": 21, \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.max_budget\", \"old\": null, \"new\": 800, \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.language\", \"old\": null, \"new\": \"ja\", \"source\": \"turn_input\"},\n    {\"field\": \"state.priority\", \"old\": null, \"new\": [\"accuracy\", \"latency\", \"traceability\"], \"source\": \"turn_input\"},\n    {\"field\": \"state.open_items\", \"old\": null, \"new\": [\"collect assignee names\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"QA migration plan initialized. Note about deadline/priority changes saved for future consideration.\"\n}",
+              "output_tokens": 380,
+              "latency_ms": 4871,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01WonbjX73kvBHp3Q3h7yToT",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"latency\", \"traceability\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Initial state setup complete with all required fields\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.goal\", \"old\": null, \"new\": \"Prepare a weekly QA migration plan\", \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.deadline_day\", \"old\": null, \"new\": 21, \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.max_budget\", \"old\": null, \"new\": 800, \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.language\", \"old\": null, \"new\": \"ja\", \"source\": \"turn_input\"},\n    {\"field\": \"state.priority\", \"old\": null, \"new\": [\"accuracy\", \"latency\", \"traceability\"], \"source\": \"turn_input\"},\n    {\"field\": \"state.open_items\", \"old\": null, \"new\": [\"collect assignee names\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"QA migration plan initialized. Note about deadline/priority changes saved for future consideration.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 544,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 380,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 2,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"latency\", \"traceability\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Deadline shortened as confirmed\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 21, \"new\": 14, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline updated to 14 days. Budget proposal noted for future consideration.\"\n}",
+              "output_tokens": 205,
+              "latency_ms": 3343,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_013wLHLessqv6Bp4pwZyh7fp",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"latency\", \"traceability\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Deadline shortened as confirmed\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 21, \"new\": 14, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline updated to 14 days. Budget proposal noted for future consideration.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 1310,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 205,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 3,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"latency\", \"traceability\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Language updated to support Japanese and English\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.language\", \"old\": \"ja\", \"new\": \"ja_en\", \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Language updated to ja_en. Deadline proposal pending legal approval.\"\n}",
+              "output_tokens": 207,
+              "latency_ms": 3141,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01C39AEEXRR3ZgnewBaDi5Rn",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"latency\", \"traceability\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Language updated to support Japanese and English\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.language\", \"old\": \"ja\", \"new\": \"ja_en\", \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Language updated to ja_en. Deadline proposal pending legal approval.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 1907,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 207,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 4,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Priority reordered to canonical order\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.priority\", \"old\": [\"accuracy\", \"latency\", \"traceability\"], \"new\": [\"accuracy\", \"traceability\", \"latency\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Priority reordered to canonical sequence. Traceability removal proposal noted.\"\n}",
+              "output_tokens": 223,
+              "latency_ms": 2959,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01Pp2dCAmiaVTr8p5KB9CimV",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Priority reordered to canonical order\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.priority\", \"old\": [\"accuracy\", \"latency\", \"traceability\"], \"new\": [\"accuracy\", \"traceability\", \"latency\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Priority reordered to canonical sequence. Traceability removal proposal noted.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 2504,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 223,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 5,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Budget constraint updated to 500\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.max_budget\", \"old\": 800, \"new\": 500, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Budget constraint reduced to 500.\"\n}",
+              "output_tokens": 199,
+              "latency_ms": 3317,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01XEG9VBYfqjsUgfz7iy1UtD",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Budget constraint updated to 500\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.max_budget\", \"old\": 800, \"new\": 500, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Budget constraint reduced to 500.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 3074,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 199,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 6,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Summary finalized with no state changes\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"QA migration plan finalized: 14-day deadline, 500 budget, ja_en support, accuracy-first priority.\"\n}",
+              "output_tokens": 184,
+              "latency_ms": 3418,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01ULzAbqiNrgrBm2VQizhnoL",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Summary finalized with no state changes\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"QA migration plan finalized: 14-day deadline, 500 budget, ja_en support, accuracy-first priority.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 3617,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 184,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            }
+          ],
+          "session_score": {
+            "scenario_id": "S_STABLE_01",
+            "turns": [
+              {
+                "turn": 1,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 380,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 2,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 205,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 3,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 207,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 4,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 223,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 5,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 199,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 6,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 184,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              }
+            ],
+            "delta_series": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "session_metrics": {
+              "misinterpretation_rate": 0.0,
+              "trace_completeness": 1.0,
+              "update_consistency": 1.0,
+              "internal_coherence_error_rate": 0.0,
+              "self_contradiction_rate": 0.0,
+              "rework_cost_tokens": 0.0,
+              "stability_variance": 0.0,
+              "irp_monotonic_progress_rate": 0.0,
+              "irp_oscillation_rate": 0.0
+            }
+          }
+        },
+        "conditional_delta": {
+          "provider": "anthropic",
+          "model": "claude-sonnet-4-20250514",
+          "policy": "conditional_delta",
+          "temperature": 0.0,
+          "scenario_id": "S_STABLE_01",
+          "template_id": "S_STABLE_MAIN_01",
+          "turns": [
+            {
+              "turn": 1,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"latency\", \"traceability\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"All required initialization fields provided with clear values\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.goal\", \"old\": null, \"new\": \"Prepare a weekly QA migration plan\", \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.deadline_day\", \"old\": null, \"new\": 21, \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.max_budget\", \"old\": null, \"new\": 800, \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.language\", \"old\": null, \"new\": \"ja\", \"source\": \"turn_input\"},\n    {\"field\": \"state.priority\", \"old\": null, \"new\": [\"accuracy\", \"latency\", \"traceability\"], \"source\": \"turn_input\"},\n    {\"field\": \"state.open_items\", \"old\": null, \"new\": [\"collect assignee names\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"QA migration plan initialized with 21-day deadline, ¥800 budget, Japanese language, accuracy-first priority.\"\n}",
+              "output_tokens": 390,
+              "latency_ms": 5488,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01JQnNyw13nWaV1hMsMBqoJs",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"latency\", \"traceability\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"All required initialization fields provided with clear values\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.goal\", \"old\": null, \"new\": \"Prepare a weekly QA migration plan\", \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.deadline_day\", \"old\": null, \"new\": 21, \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.max_budget\", \"old\": null, \"new\": 800, \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.language\", \"old\": null, \"new\": \"ja\", \"source\": \"turn_input\"},\n    {\"field\": \"state.priority\", \"old\": null, \"new\": [\"accuracy\", \"latency\", \"traceability\"], \"source\": \"turn_input\"},\n    {\"field\": \"state.open_items\", \"old\": null, \"new\": [\"collect assignee names\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"QA migration plan initialized with 21-day deadline, ¥800 budget, Japanese language, accuracy-first priority.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 591,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 390,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 2,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"latency\", \"traceability\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Confirmed deadline update to 14 days provided with clear instruction\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 21, \"new\": 14, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline shortened to 14 days. Budget proposal noted but not yet approved for implementation.\"\n}",
+              "output_tokens": 216,
+              "latency_ms": 3576,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01Gg5wUogZrkq3LXe3HfCwVg",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"latency\", \"traceability\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Confirmed deadline update to 14 days provided with clear instruction\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 21, \"new\": 14, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline shortened to 14 days. Budget proposal noted but not yet approved for implementation.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 1367,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 216,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 3,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"latency\", \"traceability\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Confirmed language update to Japanese + English provided with clear instruction\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.language\", \"old\": \"ja\", \"new\": \"ja_en\", \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Language updated to Japanese + English. Deadline proposal noted but awaiting legal approval.\"\n}",
+              "output_tokens": 215,
+              "latency_ms": 3302,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_0178gKUTNwM5cBqS67b78hEE",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"latency\", \"traceability\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Confirmed language update to Japanese + English provided with clear instruction\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.language\", \"old\": \"ja\", \"new\": \"ja_en\", \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Language updated to Japanese + English. Deadline proposal noted but awaiting legal approval.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 1975,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 215,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 4,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Confirmed priority reorder to canonical order provided with clear instruction\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.priority\", \"old\": [\"accuracy\", \"latency\", \"traceability\"], \"new\": [\"accuracy\", \"traceability\", \"latency\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Priority reordered to canonical order. Traceability removal proposal noted but not approved.\"\n}",
+              "output_tokens": 231,
+              "latency_ms": 3255,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_019qtcHMypt7NzaA52TYWiwN",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Confirmed priority reorder to canonical order provided with clear instruction\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.priority\", \"old\": [\"accuracy\", \"latency\", \"traceability\"], \"new\": [\"accuracy\", \"traceability\", \"latency\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Priority reordered to canonical order. Traceability removal proposal noted but not approved.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 2580,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 231,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 5,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Budget constraint update to 500 provided with clear instruction\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.max_budget\", \"old\": 800, \"new\": 500, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Budget constraint reduced from 800 to 500.\"\n}",
+              "output_tokens": 208,
+              "latency_ms": 2775,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_013y8sBfAfkWybvmykoDY62r",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Budget constraint update to 500 provided with clear instruction\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.max_budget\", \"old\": 800, \"new\": 500, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Budget constraint reduced from 800 to 500.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 3158,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 208,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 6,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"No state changes allowed for summary turn\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Final state: 14-day QA migration plan, ¥500 budget, Japanese+English, accuracy-first priority.\"\n}",
+              "output_tokens": 184,
+              "latency_ms": 3067,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_015cR7y25CFPRsKaB75TPwRN",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"No state changes allowed for summary turn\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Final state: 14-day QA migration plan, ¥500 budget, Japanese+English, accuracy-first priority.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 3710,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 184,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            }
+          ],
+          "session_score": {
+            "scenario_id": "S_STABLE_01",
+            "turns": [
+              {
+                "turn": 1,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 390,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 2,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 216,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 3,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 215,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 4,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 231,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 5,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 208,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 6,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 184,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              }
+            ],
+            "delta_series": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "session_metrics": {
+              "misinterpretation_rate": 0.0,
+              "trace_completeness": 1.0,
+              "update_consistency": 1.0,
+              "internal_coherence_error_rate": 0.0,
+              "self_contradiction_rate": 0.0,
+              "rework_cost_tokens": 0.0,
+              "stability_variance": 0.0,
+              "irp_monotonic_progress_rate": 0.0,
+              "irp_oscillation_rate": 0.0
+            }
+          }
+        }
+      }
+    },
+    {
+      "pair_index": 2,
+      "provider": "anthropic",
+      "template_id": "S_CONTEXT_DRIFT_MAIN_01",
+      "scenario_id": "S_CONTEXT_DRIFT_01",
+      "pattern": "conditional_delta",
+      "temperature": 0.0,
+      "rep": 1,
+      "arm_order": [
+        "baseline",
+        "conditional_delta"
+      ],
+      "arms": {
+        "baseline": {
+          "provider": "anthropic",
+          "model": "claude-sonnet-4-20250514",
+          "policy": "baseline",
+          "temperature": 0.0,
+          "scenario_id": "S_CONTEXT_DRIFT_01",
+          "template_id": "S_CONTEXT_DRIFT_MAIN_01",
+          "turns": [
+            {
+              "turn": 1,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"All required fields initialized successfully\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.goal\", \"old\": null, \"new\": \"Prepare customer-support response workflow\", \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.deadline_day\", \"old\": null, \"new\": 21, \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.max_budget\", \"old\": null, \"new\": 800, \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.language\", \"old\": null, \"new\": \"ja\", \"source\": \"turn_input\"},\n    {\"field\": \"state.priority\", \"old\": null, \"new\": [\"accuracy\", \"traceability\", \"latency\"], \"source\": \"turn_input\"},\n    {\"field\": \"state.open_items\", \"old\": null, \"new\": [\"confirm escalation contacts\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Customer-support workflow initialized with Japanese language, 21-day deadline, and ¥800 budget.\"\n}",
+              "output_tokens": 381,
+              "latency_ms": 4939,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_019JAUWhEZtnDkTJuH9D7bwz",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"All required fields initialized successfully\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.goal\", \"old\": null, \"new\": \"Prepare customer-support response workflow\", \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.deadline_day\", \"old\": null, \"new\": 21, \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.max_budget\", \"old\": null, \"new\": 800, \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.language\", \"old\": null, \"new\": \"ja\", \"source\": \"turn_input\"},\n    {\"field\": \"state.priority\", \"old\": null, \"new\": [\"accuracy\", \"traceability\", \"latency\"], \"source\": \"turn_input\"},\n    {\"field\": \"state.open_items\", \"old\": null, \"new\": [\"confirm escalation contacts\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Customer-support workflow initialized with Japanese language, 21-day deadline, and ¥800 budget.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 510,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 381,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 2,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Confirmed deadline update applied successfully\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 21, \"new\": 14, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline updated to 14 days. Tentative marketing proposal noted but not applied.\"\n}",
+              "output_tokens": 208,
+              "latency_ms": 3287,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01EyFt5v8TQN85jL7N4eYKyr",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Confirmed deadline update applied successfully\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 21, \"new\": 14, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline updated to 14 days. Tentative marketing proposal noted but not applied.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 1278,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 208,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 3,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Budget and language changes require approval, only open_items can be updated\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.open_items\", \"old\": [\"confirm escalation contacts\"], \"new\": [\"confirm escalation contacts\", \"wait approval id\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Added approval tracking item. Budget/language changes deferred pending approval.\"\n}",
+              "output_tokens": 225,
+              "latency_ms": 4031,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_013TdwQ4ECLStjUTquFk9jfQ",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Budget and language changes require approval, only open_items can be updated\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.open_items\", \"old\": [\"confirm escalation contacts\"], \"new\": [\"confirm escalation contacts\", \"wait approval id\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Added approval tracking item. Budget/language changes deferred pending approval.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 1881,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 225,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 4,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Confirmed language update applied successfully\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.language\", \"old\": \"ja\", \"new\": \"ja_en\", \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Language updated to ja_en. Priority reorder suggestion noted but not applied.\"\n}",
+              "output_tokens": 212,
+              "latency_ms": 2993,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01JjTBAekmMLn18X5V7MSNHJ",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Confirmed language update applied successfully\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.language\", \"old\": \"ja\", \"new\": \"ja_en\", \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Language updated to ja_en. Priority reorder suggestion noted but not applied.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 2486,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 212,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 5,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Deadline and language changes require approval, only open_items can be updated\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.open_items\", \"old\": [\"confirm escalation contacts\", \"wait approval id\"], \"new\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Added sign-off verification item. Deadline/language changes deferred pending approval.\"\n}",
+              "output_tokens": 248,
+              "latency_ms": 3236,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01B9hoktxAT3pw24krCwd2gS",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Deadline and language changes require approval, only open_items can be updated\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.open_items\", \"old\": [\"confirm escalation contacts\", \"wait approval id\"], \"new\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Added sign-off verification item. Deadline/language changes deferred pending approval.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 3092,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 248,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 6,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Confirmed budget update applied successfully\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.max_budget\", \"old\": 800, \"new\": 500, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Budget updated to ¥500. Language simplification proposal noted but not applied.\"\n}",
+              "output_tokens": 219,
+              "latency_ms": 3010,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01DXRSq7yJyYrxhixRG5xQ8G",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Confirmed budget update applied successfully\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.max_budget\", \"old\": 800, \"new\": 500, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Budget updated to ¥500. Language simplification proposal noted but not applied.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 3724,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 219,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 7,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 7,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Deadline and budget changes require approval, only open_items can be updated\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"No open items to update. Deadline/budget changes deferred pending approval.\"\n}",
+              "output_tokens": 190,
+              "latency_ms": 2764,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_013BqN5MbdNtAGJgKinpLQaB",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 7,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Deadline and budget changes require approval, only open_items can be updated\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"No open items to update. Deadline/budget changes deferred pending approval.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 4329,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 190,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 8,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 8,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"No state changes allowed for summary finalization\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Summary finalized. Current state: 14-day deadline, ¥500 budget, ja_en language, 3 open items.\"\n}",
+              "output_tokens": 198,
+              "latency_ms": 3379,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01UfmHycfAJNXar3uv9XvCyo",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 8,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"No state changes allowed for summary finalization\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Summary finalized. Current state: 14-day deadline, ¥500 budget, ja_en language, 3 open items.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 4869,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 198,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            }
+          ],
+          "session_score": {
+            "scenario_id": "S_CONTEXT_DRIFT_01",
+            "turns": [
+              {
+                "turn": 1,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 381,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 2,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 208,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 3,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 225,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 4,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 212,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 5,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 248,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 6,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 219,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 7,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 190,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 8,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 198,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              }
+            ],
+            "delta_series": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "session_metrics": {
+              "misinterpretation_rate": 0.0,
+              "trace_completeness": 1.0,
+              "update_consistency": 1.0,
+              "internal_coherence_error_rate": 0.0,
+              "self_contradiction_rate": 0.0,
+              "rework_cost_tokens": 0.0,
+              "stability_variance": 0.0,
+              "irp_monotonic_progress_rate": 0.0,
+              "irp_oscillation_rate": 0.0
+            }
+          }
+        },
+        "conditional_delta": {
+          "provider": "anthropic",
+          "model": "claude-sonnet-4-20250514",
+          "policy": "conditional_delta",
+          "temperature": 0.0,
+          "scenario_id": "S_CONTEXT_DRIFT_01",
+          "template_id": "S_CONTEXT_DRIFT_MAIN_01",
+          "turns": [
+            {
+              "turn": 1,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"All required fields provided with clear values for workflow initialization\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.goal\", \"old\": null, \"new\": \"Prepare customer-support response workflow\", \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.deadline_day\", \"old\": null, \"new\": 21, \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.max_budget\", \"old\": null, \"new\": 800, \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.language\", \"old\": null, \"new\": \"ja\", \"source\": \"turn_input\"},\n    {\"field\": \"state.priority\", \"old\": null, \"new\": [\"accuracy\", \"traceability\", \"latency\"], \"source\": \"turn_input\"},\n    {\"field\": \"state.open_items\", \"old\": null, \"new\": [\"confirm escalation contacts\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Customer-support workflow initialized with Japanese language, 21-day deadline, ¥800 budget.\"\n}",
+              "output_tokens": 385,
+              "latency_ms": 5332,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01AZApW3WqqrF245gtFrtCZZ",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"All required fields provided with clear values for workflow initialization\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.goal\", \"old\": null, \"new\": \"Prepare customer-support response workflow\", \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.deadline_day\", \"old\": null, \"new\": 21, \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.max_budget\", \"old\": null, \"new\": 800, \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.language\", \"old\": null, \"new\": \"ja\", \"source\": \"turn_input\"},\n    {\"field\": \"state.priority\", \"old\": null, \"new\": [\"accuracy\", \"traceability\", \"latency\"], \"source\": \"turn_input\"},\n    {\"field\": \"state.open_items\", \"old\": null, \"new\": [\"confirm escalation contacts\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Customer-support workflow initialized with Japanese language, 21-day deadline, ¥800 budget.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 557,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 385,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 2,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Confirmed deadline update to 14 days, ignoring tentative proposal pending approval\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 21, \"new\": 14, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline updated to 14 days. Tentative 10-day proposal noted but not applied pending approval.\"\n}",
+              "output_tokens": 224,
+              "latency_ms": 3450,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01U1WiuN825rxSbz2WUBmATV",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Confirmed deadline update to 14 days, ignoring tentative proposal pending approval\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 21, \"new\": 14, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline updated to 14 days. Tentative 10-day proposal noted but not applied pending approval.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 1329,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 224,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 3,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Budget and language changes require approval (PENDING status), only adding open item as allowed\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.open_items\", \"old\": [\"confirm escalation contacts\"], \"new\": [\"confirm escalation contacts\", \"wait approval id\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Added approval tracking item. Budget/language changes deferred pending ticket approval.\"\n}",
+              "output_tokens": 229,
+              "latency_ms": 3885,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01JSebbXcwvswACgmHZwbQ5C",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Budget and language changes require approval (PENDING status), only adding open item as allowed\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.open_items\", \"old\": [\"confirm escalation contacts\"], \"new\": [\"confirm escalation contacts\", \"wait approval id\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Added approval tracking item. Budget/language changes deferred pending ticket approval.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 1948,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 229,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 4,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Confirmed language update to ja_en, ignoring priority reorder suggestion pending approval\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.language\", \"old\": \"ja\", \"new\": \"ja_en\", \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Language updated to ja_en. Priority reorder suggestion noted but not applied pending approval.\"\n}",
+              "output_tokens": 225,
+              "latency_ms": 3405,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_015w7ZCEGUEYSQyy2jeHdqzb",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Confirmed language update to ja_en, ignoring priority reorder suggestion pending approval\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.language\", \"old\": \"ja\", \"new\": \"ja_en\", \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Language updated to ja_en. Priority reorder suggestion noted but not applied pending approval.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 2557,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 225,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 5,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Deadline and language changes require approval (PENDING status), only adding open item as allowed\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.open_items\", \"old\": [\"confirm escalation contacts\", \"wait approval id\"], \"new\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Added sign-off verification item. Deadline/language changes deferred pending ticket approval.\"\n}",
+              "output_tokens": 252,
+              "latency_ms": 3521,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01NWS7ZR17XgcvZwctApZ7Gh",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Deadline and language changes require approval (PENDING status), only adding open item as allowed\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.open_items\", \"old\": [\"confirm escalation contacts\", \"wait approval id\"], \"new\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Added sign-off verification item. Deadline/language changes deferred pending ticket approval.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 3176,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 252,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 6,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Confirmed budget update to 500, ignoring language switch proposal pending approval\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.max_budget\", \"old\": 800, \"new\": 500, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Budget updated to 500. Language switch proposal noted but not applied pending approval.\"\n}",
+              "output_tokens": 227,
+              "latency_ms": 3135,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01DDgLUqEsyRL3iKgwKfsAxe",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Confirmed budget update to 500, ignoring language switch proposal pending approval\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.max_budget\", \"old\": 800, \"new\": 500, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Budget updated to 500. Language switch proposal noted but not applied pending approval.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 3812,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 227,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 7,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 7,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Deadline and budget changes require approval (PENDING status), no open items changes requested\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"No changes applied. Deadline/budget modifications deferred pending ticket approval.\"\n}",
+              "output_tokens": 191,
+              "latency_ms": 2947,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01Jp64NKnWoMopzGj4aoGzHr",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 7,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Deadline and budget changes require approval (PENDING status), no open items changes requested\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"No changes applied. Deadline/budget modifications deferred pending ticket approval.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 4425,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 191,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 8,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 8,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"No state changes allowed for summary turn\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Summary complete. Workflow: 14-day deadline, ¥500 budget, ja_en language, 3 open items.\"\n}",
+              "output_tokens": 196,
+              "latency_ms": 3482,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01PC8NWh5vGeSAifq1kvjH1V",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 8,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"No state changes allowed for summary turn\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Summary complete. Workflow: 14-day deadline, ¥500 budget, ja_en language, 3 open items.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 4966,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 196,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            }
+          ],
+          "session_score": {
+            "scenario_id": "S_CONTEXT_DRIFT_01",
+            "turns": [
+              {
+                "turn": 1,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 385,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 2,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 224,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 3,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 229,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 4,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 225,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 5,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 252,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 6,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 227,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 7,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 191,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 8,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 196,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              }
+            ],
+            "delta_series": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "session_metrics": {
+              "misinterpretation_rate": 0.0,
+              "trace_completeness": 1.0,
+              "update_consistency": 1.0,
+              "internal_coherence_error_rate": 0.0,
+              "self_contradiction_rate": 0.0,
+              "rework_cost_tokens": 0.0,
+              "stability_variance": 0.0,
+              "irp_monotonic_progress_rate": 0.0,
+              "irp_oscillation_rate": 0.0
+            }
+          }
+        }
+      }
+    },
+    {
+      "pair_index": 3,
+      "provider": "anthropic",
+      "template_id": "S_DRIFT_RETURN_RECOVERY_MAIN_01",
+      "scenario_id": "S_DRIFT_RETURN_RECOVERY_01",
+      "pattern": "conditional_delta",
+      "temperature": 0.0,
+      "rep": 1,
+      "arm_order": [
+        "baseline",
+        "conditional_delta"
+      ],
+      "arms": {
+        "baseline": {
+          "provider": "anthropic",
+          "model": "claude-sonnet-4-20250514",
+          "policy": "baseline",
+          "temperature": 0.0,
+          "scenario_id": "S_DRIFT_RETURN_RECOVERY_01",
+          "template_id": "S_DRIFT_RETURN_RECOVERY_MAIN_01",
+          "turns": [
+            {
+              "turn": 1,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Initial state setup complete with all required fields\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.goal\", \"old\": null, \"new\": \"Prepare incident-response communication plan\", \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.deadline_day\", \"old\": null, \"new\": 21, \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.max_budget\", \"old\": null, \"new\": 800, \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.language\", \"old\": null, \"new\": \"ja\", \"source\": \"turn_input\"},\n    {\"field\": \"state.priority\", \"old\": null, \"new\": [\"accuracy\", \"traceability\", \"latency\"], \"source\": \"turn_input\"},\n    {\"field\": \"state.open_items\", \"old\": null, \"new\": [\"confirm stakeholder approval chain\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Incident-response communication plan initialized with Japanese language priority and 21-day deadline.\"\n}",
+              "output_tokens": 381,
+              "latency_ms": 4570,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01Kwh1iLnEospydW8tHeP5EE",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Initial state setup complete with all required fields\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.goal\", \"old\": null, \"new\": \"Prepare incident-response communication plan\", \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.deadline_day\", \"old\": null, \"new\": 21, \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.max_budget\", \"old\": null, \"new\": 800, \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.language\", \"old\": null, \"new\": \"ja\", \"source\": \"turn_input\"},\n    {\"field\": \"state.priority\", \"old\": null, \"new\": [\"accuracy\", \"traceability\", \"latency\"], \"source\": \"turn_input\"},\n    {\"field\": \"state.open_items\", \"old\": null, \"new\": [\"confirm stakeholder approval chain\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Incident-response communication plan initialized with Japanese language priority and 21-day deadline.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 511,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 381,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 2,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Applied canonical deadline update as confirmed\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 21, \"new\": 14, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline updated to 14 days. Emergency option proposal noted but not applied pending approval.\"\n}",
+              "output_tokens": 209,
+              "latency_ms": 3527,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01FcngKCDXap7w3y79BnK8Ai",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Applied canonical deadline update as confirmed\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 21, \"new\": 14, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline updated to 14 days. Emergency option proposal noted but not applied pending approval.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 1277,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 209,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 3,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 7,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"latency\", \"accuracy\", \"traceability\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Emergency drift applied - accelerated timeline with latency prioritized\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 14, \"new\": 7, \"source\": \"turn_input\"},\n    {\"field\": \"state.priority\", \"old\": [\"accuracy\", \"traceability\", \"latency\"], \"new\": [\"latency\", \"accuracy\", \"traceability\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Emergency drift: deadline accelerated to 7 days, latency now top priority for rapid response.\"\n}",
+              "output_tokens": 265,
+              "latency_ms": 3805,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01EpDWQWMeTwz1xQgFT94ifP",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 7,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"latency\", \"accuracy\", \"traceability\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Emergency drift applied - accelerated timeline with latency prioritized\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 14, \"new\": 7, \"source\": \"turn_input\"},\n    {\"field\": \"state.priority\", \"old\": [\"accuracy\", \"traceability\", \"latency\"], \"new\": [\"latency\", \"accuracy\", \"traceability\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Emergency drift: deadline accelerated to 7 days, latency now top priority for rapid response.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 1864,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 265,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 4,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 7,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"latency\", \"accuracy\", \"traceability\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Bundle request pending approval - no changes allowed during emergency hold\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Emergency hold active. Bundle request (budget=300, cost-exception memo) noted but deferred pending approval.\"\n}",
+              "output_tokens": 181,
+              "latency_ms": 2966,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01ScB2ZpteXyQu3L96JYstJa",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 7,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"latency\", \"accuracy\", \"traceability\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Bundle request pending approval - no changes allowed during emergency hold\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Emergency hold active. Bundle request (budget=300, cost-exception memo) noted but deferred pending approval.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 2505,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 181,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 5,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Returned to canonical mode - emergency drift reverted\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 7, \"new\": 14, \"source\": \"turn_input\"},\n    {\"field\": \"state.priority\", \"old\": [\"latency\", \"accuracy\", \"traceability\"], \"new\": [\"accuracy\", \"traceability\", \"latency\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Canonical mode restored: 14-day deadline, accuracy-first priority order.\"\n}",
+              "output_tokens": 259,
+              "latency_ms": 3966,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_015PzK1qmtZDES54s23s3FKU",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Returned to canonical mode - emergency drift reverted\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 7, \"new\": 14, \"source\": \"turn_input\"},\n    {\"field\": \"state.priority\", \"old\": [\"latency\", \"accuracy\", \"traceability\"], \"new\": [\"accuracy\", \"traceability\", \"latency\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Canonical mode restored: 14-day deadline, accuracy-first priority order.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 3065,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 259,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 6,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Bundle request pending - no changes allowed during recovery verification\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Recovery verification active. Bundle request (emergency drift, latency priority) noted but deferred.\"\n}",
+              "output_tokens": 176,
+              "latency_ms": 3197,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01F21NqLQ3Bqs4pKdDW38fNB",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Bundle request pending - no changes allowed during recovery verification\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Recovery verification active. Bundle request (emergency drift, latency priority) noted but deferred.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 3699,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 176,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 7,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 7,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Applied canonical language update as confirmed\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.language\", \"old\": \"ja\", \"new\": \"ja_en\", \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Language updated to ja_en. Priority switch proposal noted but not applied pending approval.\"\n}",
+              "output_tokens": 209,
+              "latency_ms": 3388,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_012AikA9hPwMMnhS8aB1VwxB",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 7,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Applied canonical language update as confirmed\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.language\", \"old\": \"ja\", \"new\": \"ja_en\", \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Language updated to ja_en. Priority switch proposal noted but not applied pending approval.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 4257,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 209,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 8,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 8,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Applied canonical budget update as confirmed\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.max_budget\", \"old\": 800, \"new\": 500, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Budget reduced to 500 as confirmed.\"\n}",
+              "output_tokens": 201,
+              "latency_ms": 2959,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01A3BTfsYRAKasD4C7Mb3LA8",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 8,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Applied canonical budget update as confirmed\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.max_budget\", \"old\": 800, \"new\": 500, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Budget reduced to 500 as confirmed.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 4822,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 201,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 9,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 9,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\", \"drift waiver\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Added drift waiver item while bundle request remains pending\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.open_items\", \"old\": [\"confirm stakeholder approval chain\"], \"new\": [\"confirm stakeholder approval chain\", \"drift waiver\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Added drift waiver to open items. Re-drift bundle request noted but pending approval.\"\n}",
+              "output_tokens": 230,
+              "latency_ms": 4161,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01YWqmxSX2XVTwwmqC47vYpn",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 9,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\", \"drift waiver\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Added drift waiver item while bundle request remains pending\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.open_items\", \"old\": [\"confirm stakeholder approval chain\"], \"new\": [\"confirm stakeholder approval chain\", \"drift waiver\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Added drift waiver to open items. Re-drift bundle request noted but pending approval.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 5418,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 230,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 10,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 10,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\", \"drift waiver\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Finalize summary only - no state changes allowed\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Final state: 14-day deadline, 500 budget, ja_en language, accuracy-first priority, 2 open items.\"\n}",
+              "output_tokens": 194,
+              "latency_ms": 4032,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01VrFQsTBsjukMyxcWaBH9Yw",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 10,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\", \"drift waiver\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Finalize summary only - no state changes allowed\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Final state: 14-day deadline, 500 budget, ja_en language, accuracy-first priority, 2 open items.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 5998,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 194,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            }
+          ],
+          "session_score": {
+            "scenario_id": "S_DRIFT_RETURN_RECOVERY_01",
+            "turns": [
+              {
+                "turn": 1,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 381,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 2,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 209,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 3,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 265,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 4,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 181,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 5,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 259,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 6,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 176,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 7,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 209,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 8,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 201,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 9,
+                "tau_t": 1.0,
+                "m_t": 1,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 1,
+                "r_t": 230,
+                "e_t": 0.3,
+                "q_t": 0.7,
+                "output_tokens_t": 230,
+                "m_violations": [
+                  "C8_expected_action_mismatch"
+                ],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 10,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 194,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              }
+            ],
+            "delta_series": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -0.30000000000000004,
+              0.30000000000000004
+            ],
+            "session_metrics": {
+              "misinterpretation_rate": 0.1,
+              "trace_completeness": 1.0,
+              "update_consistency": 1.0,
+              "internal_coherence_error_rate": 0.0,
+              "self_contradiction_rate": 0.0,
+              "rework_cost_tokens": 230.0,
+              "stability_variance": 0.020000000000000007,
+              "irp_monotonic_progress_rate": 0.1111111111111111,
+              "irp_oscillation_rate": 0.125
+            }
+          }
+        },
+        "conditional_delta": {
+          "provider": "anthropic",
+          "model": "claude-sonnet-4-20250514",
+          "policy": "conditional_delta",
+          "temperature": 0.0,
+          "scenario_id": "S_DRIFT_RETURN_RECOVERY_01",
+          "template_id": "S_DRIFT_RETURN_RECOVERY_MAIN_01",
+          "turns": [
+            {
+              "turn": 1,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"All required fields provided with clear values for incident-response communication plan initialization\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.goal\", \"old\": null, \"new\": \"Prepare incident-response communication plan\", \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.deadline_day\", \"old\": null, \"new\": 21, \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.max_budget\", \"old\": null, \"new\": 800, \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.language\", \"old\": null, \"new\": \"ja\", \"source\": \"turn_input\"},\n    {\"field\": \"state.priority\", \"old\": null, \"new\": [\"accuracy\", \"traceability\", \"latency\"], \"source\": \"turn_input\"},\n    {\"field\": \"state.open_items\", \"old\": null, \"new\": [\"confirm stakeholder approval chain\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Incident-response communication plan initialized with Japanese language, 21-day deadline, ¥800 budget.\"\n}",
+              "output_tokens": 393,
+              "latency_ms": 4921,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01C1uQt12u3WDudeePkjdxLz",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"All required fields provided with clear values for incident-response communication plan initialization\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.goal\", \"old\": null, \"new\": \"Prepare incident-response communication plan\", \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.deadline_day\", \"old\": null, \"new\": 21, \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.max_budget\", \"old\": null, \"new\": 800, \"source\": \"turn_input\"},\n    {\"field\": \"state.constraints.language\", \"old\": null, \"new\": \"ja\", \"source\": \"turn_input\"},\n    {\"field\": \"state.priority\", \"old\": null, \"new\": [\"accuracy\", \"traceability\", \"latency\"], \"source\": \"turn_input\"},\n    {\"field\": \"state.open_items\", \"old\": null, \"new\": [\"confirm stakeholder approval chain\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Incident-response communication plan initialized with Japanese language, 21-day deadline, ¥800 budget.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 558,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 393,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 2,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Canonical update confirmed for deadline_day=14, ignoring tentative proposal\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 21, \"new\": 14, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline updated to 14 days as confirmed. Emergency option proposal noted but not applied.\"\n}",
+              "output_tokens": 219,
+              "latency_ms": 3628,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01Upo4uM1xScdnJEvCNvqP5e",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Canonical update confirmed for deadline_day=14, ignoring tentative proposal\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 21, \"new\": 14, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline updated to 14 days as confirmed. Emergency option proposal noted but not applied.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 1336,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 219,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 3,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 7,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"latency\", \"accuracy\", \"traceability\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Emergency drift command executed: deadline shortened to 7 days, priority reordered for latency-first\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 14, \"new\": 7, \"source\": \"turn_input\"},\n    {\"field\": \"state.priority\", \"old\": [\"accuracy\", \"traceability\", \"latency\"], \"new\": [\"latency\", \"accuracy\", \"traceability\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Emergency drift applied: 7-day deadline, latency-first priority for rapid incident response.\"\n}",
+              "output_tokens": 274,
+              "latency_ms": 4304,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01Fcgx3mJxrm7MsBFgmzPFTe",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 7,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"latency\", \"accuracy\", \"traceability\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Emergency drift command executed: deadline shortened to 7 days, priority reordered for latency-first\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 14, \"new\": 7, \"source\": \"turn_input\"},\n    {\"field\": \"state.priority\", \"old\": [\"accuracy\", \"traceability\", \"latency\"], \"new\": [\"latency\", \"accuracy\", \"traceability\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Emergency drift applied: 7-day deadline, latency-first priority for rapid incident response.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 1933,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 274,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 4,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 7,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"latency\", \"accuracy\", \"traceability\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Bundle request pending approval - cannot modify budget or open_items while ticket status is PENDING\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Emergency hold: bundle request (budget=300, cost-exception memo) awaiting approval. No changes applied.\"\n}",
+              "output_tokens": 188,
+              "latency_ms": 3309,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01TLyUFYtK5Aem7FnMgTJQb7",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 7,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"latency\", \"accuracy\", \"traceability\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Bundle request pending approval - cannot modify budget or open_items while ticket status is PENDING\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Emergency hold: bundle request (budget=300, cost-exception memo) awaiting approval. No changes applied.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 2583,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 188,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 5,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Canonical mode restored: deadline extended to 14 days, priority reset to accuracy-first\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 7, \"new\": 14, \"source\": \"turn_input\"},\n    {\"field\": \"state.priority\", \"old\": [\"latency\", \"accuracy\", \"traceability\"], \"new\": [\"accuracy\", \"traceability\", \"latency\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Canonical mode restored: 14-day deadline, accuracy-first priority for incident response plan.\"\n}",
+              "output_tokens": 271,
+              "latency_ms": 3495,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01MVYgqondrXGuZ2HNrPjTs2",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Canonical mode restored: deadline extended to 14 days, priority reset to accuracy-first\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 7, \"new\": 14, \"source\": \"turn_input\"},\n    {\"field\": \"state.priority\", \"old\": [\"latency\", \"accuracy\", \"traceability\"], \"new\": [\"accuracy\", \"traceability\", \"latency\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Canonical mode restored: 14-day deadline, accuracy-first priority for incident response plan.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 3150,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 271,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 6,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Bundle request pending approval - cannot modify priority while ticket status is PENDING\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Recovery verification: bundle request (emergency drift, latency priority) awaiting approval.\"\n}",
+              "output_tokens": 178,
+              "latency_ms": 2796,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01J88Qvncb7gZJFRS16VLVDo",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Bundle request pending approval - cannot modify priority while ticket status is PENDING\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Recovery verification: bundle request (emergency drift, latency priority) awaiting approval.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 3796,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 178,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 7,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 7,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Canonical update confirmed for language=ja_en, ignoring tentative priority proposal\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.language\", \"old\": \"ja\", \"new\": \"ja_en\", \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Language updated to Japanese-English bilingual. Priority change proposal noted but not applied.\"\n}",
+              "output_tokens": 220,
+              "latency_ms": 3449,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01FbECaMP26oXCW7dit2wLv8",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 7,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Canonical update confirmed for language=ja_en, ignoring tentative priority proposal\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.language\", \"old\": \"ja\", \"new\": \"ja_en\", \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Language updated to Japanese-English bilingual. Priority change proposal noted but not applied.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 4356,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 220,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 8,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 8,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Canonical update confirmed for max_budget=500\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.max_budget\", \"old\": 800, \"new\": 500, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Budget reduced to ¥500 as confirmed for incident-response communication plan.\"\n}",
+              "output_tokens": 213,
+              "latency_ms": 3377,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_01F95HidTg1sSw3CVPu6q1Td",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 8,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Canonical update confirmed for max_budget=500\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.max_budget\", \"old\": 800, \"new\": 500, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Budget reduced to ¥500 as confirmed for incident-response communication plan.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 4932,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 213,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 9,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 9,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Bundle request pending approval - can only modify open_items but deadline and priority changes also requested\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Pseudo re-drift bundle request (deadline=9, latency priority, drift waiver) awaiting approval.\"\n}",
+              "output_tokens": 191,
+              "latency_ms": 3155,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_011svsncB9LxjQVdCoKmyRuJ",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 9,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Bundle request pending approval - can only modify open_items but deadline and priority changes also requested\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Pseudo re-drift bundle request (deadline=9, latency priority, drift waiver) awaiting approval.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 5540,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 191,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            },
+            {
+              "turn": 10,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 10,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Finalize summary only - no state changes allowed\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Final state: 14-day bilingual incident plan, ¥500 budget, accuracy-first priority, 1 open item.\"\n}",
+              "output_tokens": 189,
+              "latency_ms": 4121,
+              "provider_response": {
+                "model": "claude-sonnet-4-20250514",
+                "id": "msg_016EXWH3fywG5BY5yYh1dyfb",
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\n  \"turn_id\": 10,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Finalize summary only - no state changes allowed\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Final state: 14-day bilingual incident plan, ¥500 budget, accuracy-first priority, 1 open item.\"\n}"
+                  }
+                ],
+                "stop_reason": "end_turn",
+                "stop_sequence": null,
+                "usage": {
+                  "input_tokens": 6081,
+                  "cache_creation_input_tokens": 0,
+                  "cache_read_input_tokens": 0,
+                  "cache_creation": {
+                    "ephemeral_5m_input_tokens": 0,
+                    "ephemeral_1h_input_tokens": 0
+                  },
+                  "output_tokens": 189,
+                  "service_tier": "standard",
+                  "inference_geo": "not_available"
+                }
+              }
+            }
+          ],
+          "session_score": {
+            "scenario_id": "S_DRIFT_RETURN_RECOVERY_01",
+            "turns": [
+              {
+                "turn": 1,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 393,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 2,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 219,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 3,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 274,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 4,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 188,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 5,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 271,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 6,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 178,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 7,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 220,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 8,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 213,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 9,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 191,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 10,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 189,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              }
+            ],
+            "delta_series": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "session_metrics": {
+              "misinterpretation_rate": 0.0,
+              "trace_completeness": 1.0,
+              "update_consistency": 1.0,
+              "internal_coherence_error_rate": 0.0,
+              "self_contradiction_rate": 0.0,
+              "rework_cost_tokens": 0.0,
+              "stability_variance": 0.0,
+              "irp_monotonic_progress_rate": 0.0,
+              "irp_oscillation_rate": 0.0
+            }
+          }
+        }
+      }
+    }
+  ],
+  "summary": {
+    "arm_summary": [
+      {
+        "provider": "anthropic",
+        "arm": "baseline",
+        "n_sessions": 3,
+        "scenarios": [
+          "S_CONTEXT_DRIFT_01",
+          "S_DRIFT_RETURN_RECOVERY_01",
+          "S_STABLE_01"
+        ],
+        "misinterpretation_rate": 0.03333333333333333,
+        "trace_completeness": 1.0,
+        "update_consistency": 1.0,
+        "internal_coherence_error_rate": 0.0,
+        "self_contradiction_rate": 0.0,
+        "rework_cost_tokens": 76.66666666666667
+      },
+      {
+        "provider": "anthropic",
+        "arm": "conditional_delta",
+        "n_sessions": 3,
+        "scenarios": [
+          "S_CONTEXT_DRIFT_01",
+          "S_DRIFT_RETURN_RECOVERY_01",
+          "S_STABLE_01"
+        ],
+        "misinterpretation_rate": 0.0,
+        "trace_completeness": 1.0,
+        "update_consistency": 1.0,
+        "internal_coherence_error_rate": 0.0,
+        "self_contradiction_rate": 0.0,
+        "rework_cost_tokens": 0.0
+      }
+    ]
+  }
+}

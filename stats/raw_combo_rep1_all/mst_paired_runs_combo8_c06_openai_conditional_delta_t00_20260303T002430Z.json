@@ -1,0 +1,3266 @@
+{
+  "meta": {
+    "generated_at_utc": "20260303T002430Z",
+    "config": "configs/calibration_l8/experiment_mst_l8_c06.yaml",
+    "prompt_file": "configs/prompt_pairs_mst_v1.yaml",
+    "turn_input_template_file": "configs/calibration_l8/turn_input_templates_mst_l8_c06.yaml",
+    "template_set": "main",
+    "providers": [
+      "openai"
+    ],
+    "patterns": [
+      "conditional_delta"
+    ],
+    "temperatures": [
+      0.0
+    ],
+    "reps": 1,
+    "dry_run": false,
+    "max_pairs": null
+  },
+  "pairs": [
+    {
+      "pair_index": 1,
+      "provider": "openai",
+      "template_id": "S_STABLE_MAIN_01",
+      "scenario_id": "S_STABLE_01",
+      "pattern": "conditional_delta",
+      "temperature": 0.0,
+      "rep": 1,
+      "arm_order": [
+        "baseline",
+        "conditional_delta"
+      ],
+      "arms": {
+        "baseline": {
+          "provider": "openai",
+          "model": "gpt-4o-mini-2024-07-18",
+          "policy": "baseline",
+          "temperature": 0.0,
+          "scenario_id": "S_STABLE_01",
+          "template_id": "S_STABLE_MAIN_01",
+          "turns": [
+            {
+              "turn": 1,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"latency\", \"traceability\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Initial state setup for QA migration plan.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"State initialized for weekly QA migration plan.\"\n}",
+              "output_tokens": 132,
+              "latency_ms": 4025,
+              "provider_response": {
+                "id": "chatcmpl-DF7nmeSEla0WqoefqFkAq8YCYI6hK",
+                "object": "chat.completion",
+                "created": 1772497282,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"latency\", \"traceability\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Initial state setup for QA migration plan.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"State initialized for weekly QA migration plan.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 448,
+                  "completion_tokens": 132,
+                  "total_tokens": 580,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 0,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_373a14eb6f"
+              }
+            },
+            {
+              "turn": 2,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"latency\", \"traceability\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Deadline updated to 14 days.\"\n  },\n  \"update_log\": [\n    {\"field\": \"constraints.deadline_day\", \"old\": 21, \"new\": 14, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline shortened to 14 days.\"\n}",
+              "output_tokens": 161,
+              "latency_ms": 4175,
+              "provider_response": {
+                "id": "chatcmpl-DF7nqeLVdBy8yKxc81qdrale2hyVf",
+                "object": "chat.completion",
+                "created": 1772497286,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"latency\", \"traceability\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Deadline updated to 14 days.\"\n  },\n  \"update_log\": [\n    {\"field\": \"constraints.deadline_day\", \"old\": 21, \"new\": 14, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline shortened to 14 days.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 902,
+                  "completion_tokens": 161,
+                  "total_tokens": 1063,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 0,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_373a14eb6f"
+              }
+            },
+            {
+              "turn": 3,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"latency\", \"traceability\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Language updated to support Japanese and English.\"\n  },\n  \"update_log\": [\n    {\"field\": \"constraints.language\", \"old\": \"ja\", \"new\": \"ja_en\", \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Language updated to Japanese + English.\"\n}",
+              "output_tokens": 162,
+              "latency_ms": 3529,
+              "provider_response": {
+                "id": "chatcmpl-DF7ntbnyjQZ4aJf6UzNa6rcreJaXN",
+                "object": "chat.completion",
+                "created": 1772497289,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"latency\", \"traceability\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Language updated to support Japanese and English.\"\n  },\n  \"update_log\": [\n    {\"field\": \"constraints.language\", \"old\": \"ja\", \"new\": \"ja_en\", \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Language updated to Japanese + English.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 1386,
+                  "completion_tokens": 162,
+                  "total_tokens": 1548,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 1024,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_373a14eb6f"
+              }
+            },
+            {
+              "turn": 4,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Priority reordered to canonical order.\"\n  },\n  \"update_log\": [\n    {\"field\": \"priority\", \"old\": [\"accuracy\", \"latency\", \"traceability\"], \"new\": [\"accuracy\", \"traceability\", \"latency\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Priority reordered to accuracy, traceability, latency.\"\n}",
+              "output_tokens": 177,
+              "latency_ms": 4468,
+              "provider_response": {
+                "id": "chatcmpl-DF7nxNacRWcskmlHPCTCGSmtUWwwk",
+                "object": "chat.completion",
+                "created": 1772497293,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Priority reordered to canonical order.\"\n  },\n  \"update_log\": [\n    {\"field\": \"priority\", \"old\": [\"accuracy\", \"latency\", \"traceability\"], \"new\": [\"accuracy\", \"traceability\", \"latency\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Priority reordered to accuracy, traceability, latency.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 1872,
+                  "completion_tokens": 177,
+                  "total_tokens": 2049,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 1408,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_373a14eb6f"
+              }
+            },
+            {
+              "turn": 5,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Max budget updated to 500.\"\n  },\n  \"update_log\": [\n    {\"field\": \"constraints.max_budget\", \"old\": 800, \"new\": 500, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Max budget updated to 500.\"\n}",
+              "output_tokens": 161,
+              "latency_ms": 3892,
+              "provider_response": {
+                "id": "chatcmpl-DF7o2YKNfEyTbYwWLxPcdV2Q7Nm14",
+                "object": "chat.completion",
+                "created": 1772497298,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Max budget updated to 500.\"\n  },\n  \"update_log\": [\n    {\"field\": \"constraints.max_budget\", \"old\": 800, \"new\": 500, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Max budget updated to 500.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 2338,
+                  "completion_tokens": 161,
+                  "total_tokens": 2499,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 1920,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_373a14eb6f"
+              }
+            },
+            {
+              "turn": 6,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"No state changes allowed.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Summary finalized; no changes made.\"\n}",
+              "output_tokens": 130,
+              "latency_ms": 3539,
+              "provider_response": {
+                "id": "chatcmpl-DF7o6R8WAPmxvNjvqv583bFxgmNBX",
+                "object": "chat.completion",
+                "created": 1772497302,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"No state changes allowed.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Summary finalized; no changes made.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 2786,
+                  "completion_tokens": 130,
+                  "total_tokens": 2916,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 2432,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_373a14eb6f"
+              }
+            }
+          ],
+          "session_score": {
+            "scenario_id": "S_STABLE_01",
+            "turns": [
+              {
+                "turn": 1,
+                "tau_t": 1.0,
+                "m_t": 1,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 1,
+                "r_t": 132,
+                "e_t": 0.3,
+                "q_t": 0.7,
+                "output_tokens_t": 132,
+                "m_violations": [
+                  "C3_changed_field_missing_update_log"
+                ],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 2,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 161,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 3,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 162,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 4,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 177,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 5,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 161,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 6,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 130,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              }
+            ],
+            "delta_series": [
+              0.30000000000000004,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "session_metrics": {
+              "misinterpretation_rate": 0.16666666666666666,
+              "trace_completeness": 1.0,
+              "update_consistency": 1.0,
+              "internal_coherence_error_rate": 0.0,
+              "self_contradiction_rate": 0.0,
+              "rework_cost_tokens": 132.0,
+              "stability_variance": 0.014400000000000005,
+              "irp_monotonic_progress_rate": 0.2,
+              "irp_oscillation_rate": 0.0
+            }
+          }
+        },
+        "conditional_delta": {
+          "provider": "openai",
+          "model": "gpt-4o-mini-2024-07-18",
+          "policy": "conditional_delta",
+          "temperature": 0.0,
+          "scenario_id": "S_STABLE_01",
+          "template_id": "S_STABLE_MAIN_01",
+          "turns": [
+            {
+              "turn": 1,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"latency\", \"traceability\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Initial state setup for the QA migration plan.\"\n  },\n  \"update_log\": [\n    {\"field\": \"goal\", \"old\": null, \"new\": \"Prepare a weekly QA migration plan\", \"source\": \"turn_input\"},\n    {\"field\": \"constraints.deadline_day\", \"old\": null, \"new\": 21, \"source\": \"turn_input\"},\n    {\"field\": \"constraints.max_budget\", \"old\": null, \"new\": 800, \"source\": \"turn_input\"},\n    {\"field\": \"constraints.language\", \"old\": null, \"new\": \"ja\", \"source\": \"turn_input\"},\n    {\"field\": \"priority\", \"old\": null, \"new\": [\"accuracy\", \"latency\", \"traceability\"], \"source\": \"turn_input\"},\n    {\"field\": \"open_items\", \"old\": null, \"new\": [\"collect assignee names\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"State initialized for the weekly QA migration plan.\"\n}",
+              "output_tokens": 309,
+              "latency_ms": 5469,
+              "provider_response": {
+                "id": "chatcmpl-DF7o80tX3viPNKMompD979f8v7RxA",
+                "object": "chat.completion",
+                "created": 1772497304,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"latency\", \"traceability\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Initial state setup for the QA migration plan.\"\n  },\n  \"update_log\": [\n    {\"field\": \"goal\", \"old\": null, \"new\": \"Prepare a weekly QA migration plan\", \"source\": \"turn_input\"},\n    {\"field\": \"constraints.deadline_day\", \"old\": null, \"new\": 21, \"source\": \"turn_input\"},\n    {\"field\": \"constraints.max_budget\", \"old\": null, \"new\": 800, \"source\": \"turn_input\"},\n    {\"field\": \"constraints.language\", \"old\": null, \"new\": \"ja\", \"source\": \"turn_input\"},\n    {\"field\": \"priority\", \"old\": null, \"new\": [\"accuracy\", \"latency\", \"traceability\"], \"source\": \"turn_input\"},\n    {\"field\": \"open_items\", \"old\": null, \"new\": [\"collect assignee names\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"State initialized for the weekly QA migration plan.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 492,
+                  "completion_tokens": 309,
+                  "total_tokens": 801,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 0,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_fc706eab22"
+              }
+            },
+            {
+              "turn": 2,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"latency\", \"traceability\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Deadline updated as confirmed.\"\n  },\n  \"update_log\": [\n    {\"field\": \"constraints.deadline_day\", \"old\": 21, \"new\": 14, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline shortened to 14 days.\"\n}",
+              "output_tokens": 159,
+              "latency_ms": 2979,
+              "provider_response": {
+                "id": "chatcmpl-DF7oE40Up49tC5wlmnoqCikDoTnYA",
+                "object": "chat.completion",
+                "created": 1772497310,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"latency\", \"traceability\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Deadline updated as confirmed.\"\n  },\n  \"update_log\": [\n    {\"field\": \"constraints.deadline_day\", \"old\": 21, \"new\": 14, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline shortened to 14 days.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 1123,
+                  "completion_tokens": 159,
+                  "total_tokens": 1282,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 0,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_fc706eab22"
+              }
+            },
+            {
+              "turn": 3,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"latency\", \"traceability\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Language updated to support Japanese and English.\"\n  },\n  \"update_log\": [\n    {\"field\": \"constraints.language\", \"old\": \"ja\", \"new\": \"ja_en\", \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Language updated to Japanese and English.\"\n}",
+              "output_tokens": 162,
+              "latency_ms": 3828,
+              "provider_response": {
+                "id": "chatcmpl-DF7oHAAj9wHCAePWn7KGRUIR3GSnb",
+                "object": "chat.completion",
+                "created": 1772497313,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"latency\", \"traceability\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Language updated to support Japanese and English.\"\n  },\n  \"update_log\": [\n    {\"field\": \"constraints.language\", \"old\": \"ja\", \"new\": \"ja_en\", \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Language updated to Japanese and English.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 1605,
+                  "completion_tokens": 162,
+                  "total_tokens": 1767,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 1152,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_fc706eab22"
+              }
+            },
+            {
+              "turn": 4,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Priority reordered to canonical order.\"\n  },\n  \"update_log\": [\n    {\"field\": \"priority\", \"old\": [\"accuracy\", \"latency\", \"traceability\"], \"new\": [\"accuracy\", \"traceability\", \"latency\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Priority reordered to accuracy, traceability, latency.\"\n}",
+              "output_tokens": 177,
+              "latency_ms": 4046,
+              "provider_response": {
+                "id": "chatcmpl-DF7oL8mbWv5vOgICeY2dFKkmICGwz",
+                "object": "chat.completion",
+                "created": 1772497317,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Priority reordered to canonical order.\"\n  },\n  \"update_log\": [\n    {\"field\": \"priority\", \"old\": [\"accuracy\", \"latency\", \"traceability\"], \"new\": [\"accuracy\", \"traceability\", \"latency\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Priority reordered to accuracy, traceability, latency.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 2091,
+                  "completion_tokens": 177,
+                  "total_tokens": 2268,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 1664,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_fc706eab22"
+              }
+            },
+            {
+              "turn": 5,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Max budget updated to 500.\"\n  },\n  \"update_log\": [\n    {\"field\": \"constraints.max_budget\", \"old\": 800, \"new\": 500, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Max budget updated to 500.\"\n}",
+              "output_tokens": 161,
+              "latency_ms": 4502,
+              "provider_response": {
+                "id": "chatcmpl-DF7oPlxfioT5NSfTooz10osUaG8Lo",
+                "object": "chat.completion",
+                "created": 1772497321,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Max budget updated to 500.\"\n  },\n  \"update_log\": [\n    {\"field\": \"constraints.max_budget\", \"old\": 800, \"new\": 500, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Max budget updated to 500.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 2557,
+                  "completion_tokens": 161,
+                  "total_tokens": 2718,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 0,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_4ea526dd98"
+              }
+            },
+            {
+              "turn": 6,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"No state changes are allowed.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"No changes made; summary finalized.\"\n}",
+              "output_tokens": 131,
+              "latency_ms": 3057,
+              "provider_response": {
+                "id": "chatcmpl-DF7oTyvXqPQJ9X7CYUJim3ES9yQZx",
+                "object": "chat.completion",
+                "created": 1772497325,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"collect assignee names\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"No state changes are allowed.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"No changes made; summary finalized.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 3005,
+                  "completion_tokens": 131,
+                  "total_tokens": 3136,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 2688,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_4ea526dd98"
+              }
+            }
+          ],
+          "session_score": {
+            "scenario_id": "S_STABLE_01",
+            "turns": [
+              {
+                "turn": 1,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 309,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 2,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 159,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 3,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 162,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 4,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 177,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 5,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 161,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 6,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 131,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              }
+            ],
+            "delta_series": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "session_metrics": {
+              "misinterpretation_rate": 0.0,
+              "trace_completeness": 1.0,
+              "update_consistency": 1.0,
+              "internal_coherence_error_rate": 0.0,
+              "self_contradiction_rate": 0.0,
+              "rework_cost_tokens": 0.0,
+              "stability_variance": 0.0,
+              "irp_monotonic_progress_rate": 0.0,
+              "irp_oscillation_rate": 0.0
+            }
+          }
+        }
+      }
+    },
+    {
+      "pair_index": 2,
+      "provider": "openai",
+      "template_id": "S_CONTEXT_DRIFT_MAIN_01",
+      "scenario_id": "S_CONTEXT_DRIFT_01",
+      "pattern": "conditional_delta",
+      "temperature": 0.0,
+      "rep": 1,
+      "arm_order": [
+        "baseline",
+        "conditional_delta"
+      ],
+      "arms": {
+        "baseline": {
+          "provider": "openai",
+          "model": "gpt-4o-mini-2024-07-18",
+          "policy": "baseline",
+          "temperature": 0.0,
+          "scenario_id": "S_CONTEXT_DRIFT_01",
+          "template_id": "S_CONTEXT_DRIFT_MAIN_01",
+          "turns": [
+            {
+              "turn": 1,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Initial state set for the workflow.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Initial state for customer-support response workflow established.\"\n}",
+              "output_tokens": 130,
+              "latency_ms": 3547,
+              "provider_response": {
+                "id": "chatcmpl-DF7oWRR9O2QemvOtd3ooHCribBaMF",
+                "object": "chat.completion",
+                "created": 1772497328,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Initial state set for the workflow.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Initial state for customer-support response workflow established.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 418,
+                  "completion_tokens": 130,
+                  "total_tokens": 548,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 0,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_373a14eb6f"
+              }
+            },
+            {
+              "turn": 2,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Updated deadline to confirmed value.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 21, \"new\": 14, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline updated to 14 days as confirmed.\"\n}",
+              "output_tokens": 161,
+              "latency_ms": 3823,
+              "provider_response": {
+                "id": "chatcmpl-DF7oa8UauoZilLY88RrYgB3enXDO3",
+                "object": "chat.completion",
+                "created": 1772497332,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Updated deadline to confirmed value.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 21, \"new\": 14, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline updated to 14 days as confirmed.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 872,
+                  "completion_tokens": 161,
+                  "total_tokens": 1033,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 0,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_373a14eb6f"
+              }
+            },
+            {
+              "turn": 3,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Added open item for approval.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.open_items\", \"old\": [\"confirm escalation contacts\"], \"new\": [\"confirm escalation contacts\", \"wait approval id\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Added 'wait approval id' to open items.\"\n}",
+              "output_tokens": 174,
+              "latency_ms": 3906,
+              "provider_response": {
+                "id": "chatcmpl-DF7oe6xsPJUTAp0nZ9QpMMgwgxg3a",
+                "object": "chat.completion",
+                "created": 1772497336,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Added open item for approval.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.open_items\", \"old\": [\"confirm escalation contacts\"], \"new\": [\"confirm escalation contacts\", \"wait approval id\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Added 'wait approval id' to open items.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 1364,
+                  "completion_tokens": 174,
+                  "total_tokens": 1538,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 0,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_373a14eb6f"
+              }
+            },
+            {
+              "turn": 4,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Updated language to confirmed value.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.language\", \"old\": \"ja\", \"new\": \"ja_en\", \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Language updated to ja_en as confirmed.\"\n}",
+              "output_tokens": 165,
+              "latency_ms": 4800,
+              "provider_response": {
+                "id": "chatcmpl-DF7oiS2yktoDeC63yrTFiwyFFUHpB",
+                "object": "chat.completion",
+                "created": 1772497340,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Updated language to confirmed value.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.language\", \"old\": \"ja\", \"new\": \"ja_en\", \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Language updated to ja_en as confirmed.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 1854,
+                  "completion_tokens": 165,
+                  "total_tokens": 2019,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 1408,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_373a14eb6f"
+              }
+            },
+            {
+              "turn": 5,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Added open item for sign-off verification.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.open_items\", \"old\": [\"confirm escalation contacts\", \"wait approval id\"], \"new\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Added 'verify sign-off' to open items.\"\n}",
+              "output_tokens": 192,
+              "latency_ms": 4138,
+              "provider_response": {
+                "id": "chatcmpl-DF7omk5oB4l1QxyGqnZdpk1ua9o0R",
+                "object": "chat.completion",
+                "created": 1772497344,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Added open item for sign-off verification.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.open_items\", \"old\": [\"confirm escalation contacts\", \"wait approval id\"], \"new\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Added 'verify sign-off' to open items.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 2348,
+                  "completion_tokens": 192,
+                  "total_tokens": 2540,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 1920,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_373a14eb6f"
+              }
+            },
+            {
+              "turn": 6,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Updated max budget to confirmed value.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.max_budget\", \"old\": 800, \"new\": 500, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Max budget updated to 500 as confirmed.\"\n}",
+              "output_tokens": 172,
+              "latency_ms": 4904,
+              "provider_response": {
+                "id": "chatcmpl-DF7or9q6FVwDFXmENhW24Vi9CobFG",
+                "object": "chat.completion",
+                "created": 1772497349,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Updated max budget to confirmed value.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.max_budget\", \"old\": 800, \"new\": 500, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Max budget updated to 500 as confirmed.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 2860,
+                  "completion_tokens": 172,
+                  "total_tokens": 3032,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 2432,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_373a14eb6f"
+              }
+            },
+            {
+              "turn": 7,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 7,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"No changes made to the state.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"No updates made; state remains unchanged.\"\n}",
+              "output_tokens": 140,
+              "latency_ms": 3872,
+              "provider_response": {
+                "id": "chatcmpl-DF7ovjMNUL8VCQrQAcdTagDNjgmCa",
+                "object": "chat.completion",
+                "created": 1772497353,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 7,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"No changes made to the state.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"No updates made; state remains unchanged.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 3352,
+                  "completion_tokens": 140,
+                  "total_tokens": 3492,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 2944,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_373a14eb6f"
+              }
+            },
+            {
+              "turn": 8,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 8,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"No changes made; summary finalized.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Summary finalized; no state changes made.\"\n}",
+              "output_tokens": 141,
+              "latency_ms": 2777,
+              "provider_response": {
+                "id": "chatcmpl-DF7oz4KkDGgRXepf45szfV2tzyh34",
+                "object": "chat.completion",
+                "created": 1772497357,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 8,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"No changes made; summary finalized.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Summary finalized; no state changes made.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 3785,
+                  "completion_tokens": 141,
+                  "total_tokens": 3926,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 3456,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_373a14eb6f"
+              }
+            }
+          ],
+          "session_score": {
+            "scenario_id": "S_CONTEXT_DRIFT_01",
+            "turns": [
+              {
+                "turn": 1,
+                "tau_t": 1.0,
+                "m_t": 1,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 1,
+                "r_t": 130,
+                "e_t": 0.3,
+                "q_t": 0.7,
+                "output_tokens_t": 130,
+                "m_violations": [
+                  "C3_changed_field_missing_update_log"
+                ],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 2,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 161,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 3,
+                "tau_t": 1.0,
+                "m_t": 1,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 1,
+                "r_t": 174,
+                "e_t": 0.3,
+                "q_t": 0.7,
+                "output_tokens_t": 174,
+                "m_violations": [
+                  "C8_expected_action_mismatch"
+                ],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 4,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 165,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 5,
+                "tau_t": 1.0,
+                "m_t": 1,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 1,
+                "r_t": 192,
+                "e_t": 0.3,
+                "q_t": 0.7,
+                "output_tokens_t": 192,
+                "m_violations": [
+                  "C8_expected_action_mismatch"
+                ],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 6,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 172,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 7,
+                "tau_t": 1.0,
+                "m_t": 1,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 1,
+                "r_t": 140,
+                "e_t": 0.3,
+                "q_t": 0.7,
+                "output_tokens_t": 140,
+                "m_violations": [
+                  "C8_expected_action_mismatch"
+                ],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 8,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 141,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              }
+            ],
+            "delta_series": [
+              0.30000000000000004,
+              -0.30000000000000004,
+              0.30000000000000004,
+              -0.30000000000000004,
+              0.30000000000000004,
+              -0.30000000000000004,
+              0.30000000000000004
+            ],
+            "session_metrics": {
+              "misinterpretation_rate": 0.5,
+              "trace_completeness": 1.0,
+              "update_consistency": 1.0,
+              "internal_coherence_error_rate": 0.0,
+              "self_contradiction_rate": 0.0,
+              "rework_cost_tokens": 636.0,
+              "stability_variance": 0.08816326530612248,
+              "irp_monotonic_progress_rate": 0.5714285714285714,
+              "irp_oscillation_rate": 1.0
+            }
+          }
+        },
+        "conditional_delta": {
+          "provider": "openai",
+          "model": "gpt-4o-mini-2024-07-18",
+          "policy": "conditional_delta",
+          "temperature": 0.0,
+          "scenario_id": "S_CONTEXT_DRIFT_01",
+          "template_id": "S_CONTEXT_DRIFT_MAIN_01",
+          "turns": [
+            {
+              "turn": 1,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Initial state set for customer-support response workflow.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Workflow initialized for customer support.\"\n}",
+              "output_tokens": 129,
+              "latency_ms": 4100,
+              "provider_response": {
+                "id": "chatcmpl-DF7p3NzLM1DWrJ2vYhpx43QzAlZkT",
+                "object": "chat.completion",
+                "created": 1772497361,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Initial state set for customer-support response workflow.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Workflow initialized for customer support.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 462,
+                  "completion_tokens": 129,
+                  "total_tokens": 591,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 0,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_fc706eab22"
+              }
+            },
+            {
+              "turn": 2,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Confirmed deadline updated to 14 days.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 21, \"new\": 14, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline updated to 14 days.\"\n}",
+              "output_tokens": 161,
+              "latency_ms": 3994,
+              "provider_response": {
+                "id": "chatcmpl-DF7p6nLxQNCnEdimRlAJ61DVWQQcT",
+                "object": "chat.completion",
+                "created": 1772497364,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Confirmed deadline updated to 14 days.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 21, \"new\": 14, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline updated to 14 days.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 915,
+                  "completion_tokens": 161,
+                  "total_tokens": 1076,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 0,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_fc706eab22"
+              }
+            },
+            {
+              "turn": 3,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Added open item for approval.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.open_items\", \"old\": [\"confirm escalation contacts\"], \"new\": [\"confirm escalation contacts\", \"wait approval id\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Open item 'wait approval id' added.\"\n}",
+              "output_tokens": 173,
+              "latency_ms": 3464,
+              "provider_response": {
+                "id": "chatcmpl-DF7pAi1xnpBPsNALSguhWgP8sQzaB",
+                "object": "chat.completion",
+                "created": 1772497368,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Added open item for approval.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.open_items\", \"old\": [\"confirm escalation contacts\"], \"new\": [\"confirm escalation contacts\", \"wait approval id\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Open item 'wait approval id' added.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 1407,
+                  "completion_tokens": 173,
+                  "total_tokens": 1580,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 0,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_4ea526dd98"
+              }
+            },
+            {
+              "turn": 4,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Confirmed language updated to ja_en.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.language\", \"old\": \"ja\", \"new\": \"ja_en\", \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Language updated to ja_en.\"\n}",
+              "output_tokens": 164,
+              "latency_ms": 3348,
+              "provider_response": {
+                "id": "chatcmpl-DF7pEo4jKg602iEQuPM5uE41ilcVG",
+                "object": "chat.completion",
+                "created": 1772497372,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Confirmed language updated to ja_en.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.language\", \"old\": \"ja\", \"new\": \"ja_en\", \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Language updated to ja_en.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 1896,
+                  "completion_tokens": 164,
+                  "total_tokens": 2060,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 1536,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_4ea526dd98"
+              }
+            },
+            {
+              "turn": 5,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Added open item for sign-off verification.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.open_items\", \"old\": [\"confirm escalation contacts\", \"wait approval id\"], \"new\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Open item 'verify sign-off' added.\"\n}",
+              "output_tokens": 191,
+              "latency_ms": 5508,
+              "provider_response": {
+                "id": "chatcmpl-DF7pHWfWGjXGaOaP722fO3jnRJYqR",
+                "object": "chat.completion",
+                "created": 1772497375,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Added open item for sign-off verification.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.open_items\", \"old\": [\"confirm escalation contacts\", \"wait approval id\"], \"new\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Open item 'verify sign-off' added.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 2389,
+                  "completion_tokens": 191,
+                  "total_tokens": 2580,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 1024,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_fc706eab22"
+              }
+            },
+            {
+              "turn": 6,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Confirmed budget updated to 500.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.max_budget\", \"old\": 800, \"new\": 500, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Budget updated to 500.\"\n}",
+              "output_tokens": 169,
+              "latency_ms": 3636,
+              "provider_response": {
+                "id": "chatcmpl-DF7pMSsjPVVEk6uYEysj5Th9NFt5U",
+                "object": "chat.completion",
+                "created": 1772497380,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Confirmed budget updated to 500.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.max_budget\", \"old\": 800, \"new\": 500, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Budget updated to 500.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 2900,
+                  "completion_tokens": 169,
+                  "total_tokens": 3069,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 2560,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_fc706eab22"
+              }
+            },
+            {
+              "turn": 7,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 7,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Insufficient clarity on deadline and budget updates.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Request deferred due to unclear updates.\"\n}",
+              "output_tokens": 142,
+              "latency_ms": 3101,
+              "provider_response": {
+                "id": "chatcmpl-DF7pQdIm812QEz4scnmeaiwuN719O",
+                "object": "chat.completion",
+                "created": 1772497384,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 7,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Insufficient clarity on deadline and budget updates.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Request deferred due to unclear updates.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 3389,
+                  "completion_tokens": 142,
+                  "total_tokens": 3531,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 2944,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_fc706eab22"
+              }
+            },
+            {
+              "turn": 8,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 8,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"No state changes allowed.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Summary finalized; no changes made.\"\n}",
+              "output_tokens": 138,
+              "latency_ms": 2719,
+              "provider_response": {
+                "id": "chatcmpl-DF7pT51TK6GLcWn3kjxmfjrHyaYq8",
+                "object": "chat.completion",
+                "created": 1772497387,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 8,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm escalation contacts\", \"wait approval id\", \"verify sign-off\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"No state changes allowed.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Summary finalized; no changes made.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 3824,
+                  "completion_tokens": 138,
+                  "total_tokens": 3962,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 1920,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_4ea526dd98"
+              }
+            }
+          ],
+          "session_score": {
+            "scenario_id": "S_CONTEXT_DRIFT_01",
+            "turns": [
+              {
+                "turn": 1,
+                "tau_t": 1.0,
+                "m_t": 1,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 1,
+                "r_t": 129,
+                "e_t": 0.3,
+                "q_t": 0.7,
+                "output_tokens_t": 129,
+                "m_violations": [
+                  "C3_changed_field_missing_update_log"
+                ],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 2,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 161,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 3,
+                "tau_t": 1.0,
+                "m_t": 1,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 1,
+                "r_t": 173,
+                "e_t": 0.3,
+                "q_t": 0.7,
+                "output_tokens_t": 173,
+                "m_violations": [
+                  "C8_expected_action_mismatch"
+                ],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 4,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 164,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 5,
+                "tau_t": 1.0,
+                "m_t": 1,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 1,
+                "r_t": 191,
+                "e_t": 0.3,
+                "q_t": 0.7,
+                "output_tokens_t": 191,
+                "m_violations": [
+                  "C8_expected_action_mismatch"
+                ],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 6,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 169,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 7,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 142,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 8,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 138,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              }
+            ],
+            "delta_series": [
+              0.30000000000000004,
+              -0.30000000000000004,
+              0.30000000000000004,
+              -0.30000000000000004,
+              0.30000000000000004,
+              0.0,
+              0.0
+            ],
+            "session_metrics": {
+              "misinterpretation_rate": 0.375,
+              "trace_completeness": 1.0,
+              "update_consistency": 1.0,
+              "internal_coherence_error_rate": 0.0,
+              "self_contradiction_rate": 0.0,
+              "rework_cost_tokens": 493.0,
+              "stability_variance": 0.062448979591836755,
+              "irp_monotonic_progress_rate": 0.42857142857142855,
+              "irp_oscillation_rate": 0.6666666666666666
+            }
+          }
+        }
+      }
+    },
+    {
+      "pair_index": 3,
+      "provider": "openai",
+      "template_id": "S_DRIFT_RETURN_RECOVERY_MAIN_01",
+      "scenario_id": "S_DRIFT_RETURN_RECOVERY_01",
+      "pattern": "conditional_delta",
+      "temperature": 0.0,
+      "rep": 1,
+      "arm_order": [
+        "baseline",
+        "conditional_delta"
+      ],
+      "arms": {
+        "baseline": {
+          "provider": "openai",
+          "model": "gpt-4o-mini-2024-07-18",
+          "policy": "baseline",
+          "temperature": 0.0,
+          "scenario_id": "S_DRIFT_RETURN_RECOVERY_01",
+          "template_id": "S_DRIFT_RETURN_RECOVERY_MAIN_01",
+          "turns": [
+            {
+              "turn": 1,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Initial state set for the communication plan.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Incident-response communication plan initialized successfully.\"\n}",
+              "output_tokens": 130,
+              "latency_ms": 4734,
+              "provider_response": {
+                "id": "chatcmpl-DF7pWvsMnCFGOAb2h0KglEdhUBLdC",
+                "object": "chat.completion",
+                "created": 1772497390,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Initial state set for the communication plan.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Incident-response communication plan initialized successfully.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 419,
+                  "completion_tokens": 130,
+                  "total_tokens": 549,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 0,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_373a14eb6f"
+              }
+            },
+            {
+              "turn": 2,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Updated deadline_day to 14 as per canonical update.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 21, \"new\": 14, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline updated to 14 days for the communication plan.\"\n}",
+              "output_tokens": 169,
+              "latency_ms": 3701,
+              "provider_response": {
+                "id": "chatcmpl-DF7pbC504fO6EppoT6RXOozHxJMOZ",
+                "object": "chat.completion",
+                "created": 1772497395,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Updated deadline_day to 14 as per canonical update.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 21, \"new\": 14, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline updated to 14 days for the communication plan.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 870,
+                  "completion_tokens": 169,
+                  "total_tokens": 1039,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 0,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_373a14eb6f"
+              }
+            },
+            {
+              "turn": 3,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 7,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"latency\", \"accuracy\", \"traceability\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Emergency drift command executed, updated deadline and priority.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 14, \"new\": 7, \"source\": \"turn_input\"},\n    {\"field\": \"state.priority\", \"old\": [\"accuracy\", \"traceability\", \"latency\"], \"new\": [\"latency\", \"accuracy\", \"traceability\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline set to 7 days and priority updated for urgency.\"\n}",
+              "output_tokens": 212,
+              "latency_ms": 4505,
+              "provider_response": {
+                "id": "chatcmpl-DF7pfMkFLXPdurRsgoB4BKoQSEhqw",
+                "object": "chat.completion",
+                "created": 1772497399,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 7,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"latency\", \"accuracy\", \"traceability\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Emergency drift command executed, updated deadline and priority.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 14, \"new\": 7, \"source\": \"turn_input\"},\n    {\"field\": \"state.priority\", \"old\": [\"accuracy\", \"traceability\", \"latency\"], \"new\": [\"latency\", \"accuracy\", \"traceability\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline set to 7 days and priority updated for urgency.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 1354,
+                  "completion_tokens": 212,
+                  "total_tokens": 1566,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 0,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_373a14eb6f"
+              }
+            },
+            {
+              "turn": 4,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 7,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"latency\", \"accuracy\", \"traceability\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"No changes allowed in the current state.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"No updates made; current state remains unchanged.\"\n}",
+              "output_tokens": 133,
+              "latency_ms": 3053,
+              "provider_response": {
+                "id": "chatcmpl-DF7pjFtgzPT5GqjH6P7ym1lnwDgBW",
+                "object": "chat.completion",
+                "created": 1772497403,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 7,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"latency\", \"accuracy\", \"traceability\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"No changes allowed in the current state.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"No updates made; current state remains unchanged.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 1882,
+                  "completion_tokens": 133,
+                  "total_tokens": 2015,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 1536,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_373a14eb6f"
+              }
+            },
+            {
+              "turn": 5,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Returned to canonical mode with updated deadline and priority.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 7, \"new\": 14, \"source\": \"turn_input\"},\n    {\"field\": \"state.priority\", \"old\": [\"latency\", \"accuracy\", \"traceability\"], \"new\": [\"accuracy\", \"traceability\", \"latency\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline reset to 14 days and priority updated to canonical mode.\"\n}",
+              "output_tokens": 213,
+              "latency_ms": 5416,
+              "provider_response": {
+                "id": "chatcmpl-DF7pmXBIh7l4JPlLHR7VRt9KDbDci",
+                "object": "chat.completion",
+                "created": 1772497406,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Returned to canonical mode with updated deadline and priority.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 7, \"new\": 14, \"source\": \"turn_input\"},\n    {\"field\": \"state.priority\", \"old\": [\"latency\", \"accuracy\", \"traceability\"], \"new\": [\"accuracy\", \"traceability\", \"latency\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline reset to 14 days and priority updated to canonical mode.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 2331,
+                  "completion_tokens": 213,
+                  "total_tokens": 2544,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 1920,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_373a14eb6f"
+              }
+            },
+            {
+              "turn": 6,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"No changes allowed in the current state.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"No updates made; current state remains unchanged.\"\n}",
+              "output_tokens": 133,
+              "latency_ms": 2950,
+              "provider_response": {
+                "id": "chatcmpl-DF7pr06weUlFh13gaAg1tjWwurIdT",
+                "object": "chat.completion",
+                "created": 1772497411,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"No changes allowed in the current state.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"No updates made; current state remains unchanged.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 2860,
+                  "completion_tokens": 133,
+                  "total_tokens": 2993,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 2432,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_373a14eb6f"
+              }
+            },
+            {
+              "turn": 7,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 7,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Updated language to ja_en as per canonical update.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.language\", \"old\": \"ja\", \"new\": \"ja_en\", \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Language updated to ja_en for the communication plan.\"\n}",
+              "output_tokens": 167,
+              "latency_ms": 3689,
+              "provider_response": {
+                "id": "chatcmpl-DF7puIdgsAZZrWItEfWbsH1RDLFUj",
+                "object": "chat.completion",
+                "created": 1772497414,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 7,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Updated language to ja_en as per canonical update.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.language\", \"old\": \"ja\", \"new\": \"ja_en\", \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Language updated to ja_en for the communication plan.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 3310,
+                  "completion_tokens": 167,
+                  "total_tokens": 3477,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 2944,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_373a14eb6f"
+              }
+            },
+            {
+              "turn": 8,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 8,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Updated max_budget to 500 as per canonical update.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.max_budget\", \"old\": 800, \"new\": 500, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Max budget updated to 500 for the communication plan.\"\n}",
+              "output_tokens": 169,
+              "latency_ms": 4326,
+              "provider_response": {
+                "id": "chatcmpl-DF7pyMoOc9no2uBFfWHVKC1Z2158q",
+                "object": "chat.completion",
+                "created": 1772497418,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 8,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Updated max_budget to 500 as per canonical update.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.max_budget\", \"old\": 800, \"new\": 500, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Max budget updated to 500 for the communication plan.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 3772,
+                  "completion_tokens": 169,
+                  "total_tokens": 3941,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 3456,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_373a14eb6f"
+              }
+            },
+            {
+              "turn": 9,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 9,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\", \"drift waiver\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Added open item for drift waiver as per team request.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.open_items\", \"old\": [\"confirm stakeholder approval chain\"], \"new\": [\"confirm stakeholder approval chain\", \"drift waiver\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Drift waiver added to open items for the communication plan.\"\n}",
+              "output_tokens": 185,
+              "latency_ms": 3745,
+              "provider_response": {
+                "id": "chatcmpl-DF7q2DVTfK81GCS45zEfXEmPHpE89",
+                "object": "chat.completion",
+                "created": 1772497422,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 9,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\", \"drift waiver\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Added open item for drift waiver as per team request.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.open_items\", \"old\": [\"confirm stakeholder approval chain\"], \"new\": [\"confirm stakeholder approval chain\", \"drift waiver\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Drift waiver added to open items for the communication plan.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 4270,
+                  "completion_tokens": 185,
+                  "total_tokens": 4455,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 3840,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_373a14eb6f"
+              }
+            },
+            {
+              "turn": 10,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 10,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\", \"drift waiver\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"No changes allowed; finalizing summary only.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Summary finalized; no state changes made.\"\n}",
+              "output_tokens": 139,
+              "latency_ms": 5009,
+              "provider_response": {
+                "id": "chatcmpl-DF7q6ZKkaRt9wRSUy19XJLXOts7C6",
+                "object": "chat.completion",
+                "created": 1772497426,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 10,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\", \"drift waiver\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"No changes allowed; finalizing summary only.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Summary finalized; no state changes made.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 4748,
+                  "completion_tokens": 139,
+                  "total_tokens": 4887,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 4352,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_373a14eb6f"
+              }
+            }
+          ],
+          "session_score": {
+            "scenario_id": "S_DRIFT_RETURN_RECOVERY_01",
+            "turns": [
+              {
+                "turn": 1,
+                "tau_t": 1.0,
+                "m_t": 1,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 1,
+                "r_t": 130,
+                "e_t": 0.3,
+                "q_t": 0.7,
+                "output_tokens_t": 130,
+                "m_violations": [
+                  "C3_changed_field_missing_update_log"
+                ],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 2,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 169,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 3,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 212,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 4,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 133,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 5,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 213,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 6,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 133,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 7,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 167,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 8,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 169,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 9,
+                "tau_t": 1.0,
+                "m_t": 1,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 1,
+                "r_t": 185,
+                "e_t": 0.3,
+                "q_t": 0.7,
+                "output_tokens_t": 185,
+                "m_violations": [
+                  "C8_expected_action_mismatch"
+                ],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 10,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 139,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              }
+            ],
+            "delta_series": [
+              0.30000000000000004,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -0.30000000000000004,
+              0.30000000000000004
+            ],
+            "session_metrics": {
+              "misinterpretation_rate": 0.2,
+              "trace_completeness": 1.0,
+              "update_consistency": 1.0,
+              "internal_coherence_error_rate": 0.0,
+              "self_contradiction_rate": 0.0,
+              "rework_cost_tokens": 315.0,
+              "stability_variance": 0.028888888888888898,
+              "irp_monotonic_progress_rate": 0.2222222222222222,
+              "irp_oscillation_rate": 0.125
+            }
+          }
+        },
+        "conditional_delta": {
+          "provider": "openai",
+          "model": "gpt-4o-mini-2024-07-18",
+          "policy": "conditional_delta",
+          "temperature": 0.0,
+          "scenario_id": "S_DRIFT_RETURN_RECOVERY_01",
+          "template_id": "S_DRIFT_RETURN_RECOVERY_MAIN_01",
+          "turns": [
+            {
+              "turn": 1,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Initial state set for the incident-response communication plan.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"State initialized for the incident-response communication plan.\"\n}",
+              "output_tokens": 134,
+              "latency_ms": 2975,
+              "provider_response": {
+                "id": "chatcmpl-DF7qB35HSFmaVs7yOWESm3qEyZlIw",
+                "object": "chat.completion",
+                "created": 1772497431,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Initial state set for the incident-response communication plan.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"State initialized for the incident-response communication plan.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 463,
+                  "completion_tokens": 134,
+                  "total_tokens": 597,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 0,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_fc706eab22"
+              }
+            },
+            {
+              "turn": 2,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Canonical update applied for deadline_day.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 21, \"new\": 14, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline updated to 14 for the incident-response plan.\"\n}",
+              "output_tokens": 165,
+              "latency_ms": 3518,
+              "provider_response": {
+                "id": "chatcmpl-DF7qEVssIDsbuoGQmXZiLeBxBklC7",
+                "object": "chat.completion",
+                "created": 1772497434,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Canonical update applied for deadline_day.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 21, \"new\": 14, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline updated to 14 for the incident-response plan.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 918,
+                  "completion_tokens": 165,
+                  "total_tokens": 1083,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 0,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_fc706eab22"
+              }
+            },
+            {
+              "turn": 3,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 7,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"latency\", \"accuracy\", \"traceability\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Emergency drift command applied.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 14, \"new\": 7, \"source\": \"turn_input\"},\n    {\"field\": \"state.priority\", \"old\": [\"accuracy\", \"traceability\", \"latency\"], \"new\": [\"latency\", \"accuracy\", \"traceability\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline set to 7 and priority updated for the plan.\"\n}",
+              "output_tokens": 207,
+              "latency_ms": 4898,
+              "provider_response": {
+                "id": "chatcmpl-DF7qH9BX944EgP8zDhuACdux48ItM",
+                "object": "chat.completion",
+                "created": 1772497437,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 7,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"latency\", \"accuracy\", \"traceability\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Emergency drift command applied.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 14, \"new\": 7, \"source\": \"turn_input\"},\n    {\"field\": \"state.priority\", \"old\": [\"accuracy\", \"traceability\", \"latency\"], \"new\": [\"latency\", \"accuracy\", \"traceability\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline set to 7 and priority updated for the plan.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 1398,
+                  "completion_tokens": 207,
+                  "total_tokens": 1605,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 1024,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_fc706eab22"
+              }
+            },
+            {
+              "turn": 4,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 7,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"latency\", \"accuracy\", \"traceability\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"No allowed changes for this turn.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"No changes made; emergency hold check completed.\"\n}",
+              "output_tokens": 132,
+              "latency_ms": 4144,
+              "provider_response": {
+                "id": "chatcmpl-DF7qMkNNPNEBAikDLquON7cGeyqfo",
+                "object": "chat.completion",
+                "created": 1772497442,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 7,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"latency\", \"accuracy\", \"traceability\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"No allowed changes for this turn.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"No changes made; emergency hold check completed.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 1921,
+                  "completion_tokens": 132,
+                  "total_tokens": 2053,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 1536,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_fc706eab22"
+              }
+            },
+            {
+              "turn": 5,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Returned to canonical mode.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 7, \"new\": 14, \"source\": \"turn_input\"},\n    {\"field\": \"state.priority\", \"old\": [\"latency\", \"accuracy\", \"traceability\"], \"new\": [\"accuracy\", \"traceability\", \"latency\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline reset to 14 and priority returned to canonical order.\"\n}",
+              "output_tokens": 207,
+              "latency_ms": 5270,
+              "provider_response": {
+                "id": "chatcmpl-DF7qRvQvLzqg4jFj9E5vEpxrcY7rw",
+                "object": "chat.completion",
+                "created": 1772497447,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Returned to canonical mode.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.deadline_day\", \"old\": 7, \"new\": 14, \"source\": \"turn_input\"},\n    {\"field\": \"state.priority\", \"old\": [\"latency\", \"accuracy\", \"traceability\"], \"new\": [\"accuracy\", \"traceability\", \"latency\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Deadline reset to 14 and priority returned to canonical order.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 2369,
+                  "completion_tokens": 207,
+                  "total_tokens": 2576,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 0,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_4ea526dd98"
+              }
+            },
+            {
+              "turn": 6,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"No allowed changes for this turn.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"No changes made; recovery verification completed.\"\n}",
+              "output_tokens": 131,
+              "latency_ms": 2934,
+              "provider_response": {
+                "id": "chatcmpl-DF7qWJAATredxvLnPhfWrQekKTiZa",
+                "object": "chat.completion",
+                "created": 1772497452,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"No allowed changes for this turn.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"No changes made; recovery verification completed.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 2892,
+                  "completion_tokens": 131,
+                  "total_tokens": 3023,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 1920,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_fc706eab22"
+              }
+            },
+            {
+              "turn": 7,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 7,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Canonical update applied for language.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.language\", \"old\": \"ja\", \"new\": \"ja_en\", \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Language updated to ja_en for the communication plan.\"\n}",
+              "output_tokens": 163,
+              "latency_ms": 3139,
+              "provider_response": {
+                "id": "chatcmpl-DF7qZxpNgtIPsdQXX7Nt1mmWZ4nsa",
+                "object": "chat.completion",
+                "created": 1772497455,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 7,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Canonical update applied for language.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.language\", \"old\": \"ja\", \"new\": \"ja_en\", \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Language updated to ja_en for the communication plan.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 3340,
+                  "completion_tokens": 163,
+                  "total_tokens": 3503,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 2944,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_fc706eab22"
+              }
+            },
+            {
+              "turn": 8,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 8,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Canonical update applied for max_budget.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.max_budget\", \"old\": 800, \"new\": 500, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Max budget updated to 500 for the communication plan.\"\n}",
+              "output_tokens": 165,
+              "latency_ms": 5197,
+              "provider_response": {
+                "id": "chatcmpl-DF7qck8djKLTNah3V12mmwaKpfxrP",
+                "object": "chat.completion",
+                "created": 1772497458,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 8,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Canonical update applied for max_budget.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.constraints.max_budget\", \"old\": 800, \"new\": 500, \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Max budget updated to 500 for the communication plan.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 3798,
+                  "completion_tokens": 165,
+                  "total_tokens": 3963,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 3456,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_fc706eab22"
+              }
+            },
+            {
+              "turn": 9,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 9,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\", \"drift waiver\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Added open item for drift waiver.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.open_items\", \"old\": [\"confirm stakeholder approval chain\"], \"new\": [\"confirm stakeholder approval chain\", \"drift waiver\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Drift waiver added to open items for the plan.\"\n}",
+              "output_tokens": 180,
+              "latency_ms": 3825,
+              "provider_response": {
+                "id": "chatcmpl-DF7qhiPfqGOUTCn6e5kBXae5mxQdM",
+                "object": "chat.completion",
+                "created": 1772497463,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 9,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\", \"drift waiver\"]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Added open item for drift waiver.\"\n  },\n  \"update_log\": [\n    {\"field\": \"state.open_items\", \"old\": [\"confirm stakeholder approval chain\"], \"new\": [\"confirm stakeholder approval chain\", \"drift waiver\"], \"source\": \"turn_input\"}\n  ],\n  \"response_text\": \"Drift waiver added to open items for the plan.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 4292,
+                  "completion_tokens": 180,
+                  "total_tokens": 4472,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 3840,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_fc706eab22"
+              }
+            },
+            {
+              "turn": 10,
+              "event": null,
+              "phase": null,
+              "raw_output": "{\n  \"turn_id\": 10,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\", \"drift waiver\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"No state changes allowed for this turn.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Summary finalized; no changes made.\"\n}",
+              "output_tokens": 137,
+              "latency_ms": 3152,
+              "provider_response": {
+                "id": "chatcmpl-DF7qlJWpyWg0gdZApTmacEi6gNoVM",
+                "object": "chat.completion",
+                "created": 1772497467,
+                "model": "gpt-4o-mini-2024-07-18",
+                "choices": [
+                  {
+                    "index": 0,
+                    "message": {
+                      "role": "assistant",
+                      "content": "{\n  \"turn_id\": 10,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\"accuracy\", \"traceability\", \"latency\"],\n    \"open_items\": [\"confirm stakeholder approval chain\", \"drift waiver\"]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"No state changes allowed for this turn.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Summary finalized; no changes made.\"\n}",
+                      "refusal": null,
+                      "annotations": []
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 4765,
+                  "completion_tokens": 137,
+                  "total_tokens": 4902,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 2432,
+                    "audio_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 0,
+                    "audio_tokens": 0,
+                    "accepted_prediction_tokens": 0,
+                    "rejected_prediction_tokens": 0
+                  }
+                },
+                "service_tier": "default",
+                "system_fingerprint": "fp_4ea526dd98"
+              }
+            }
+          ],
+          "session_score": {
+            "scenario_id": "S_DRIFT_RETURN_RECOVERY_01",
+            "turns": [
+              {
+                "turn": 1,
+                "tau_t": 1.0,
+                "m_t": 1,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 1,
+                "r_t": 134,
+                "e_t": 0.3,
+                "q_t": 0.7,
+                "output_tokens_t": 134,
+                "m_violations": [
+                  "C3_changed_field_missing_update_log"
+                ],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 2,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 165,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 3,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 207,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 4,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 132,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 5,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 207,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 6,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 131,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 7,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 163,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 8,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 165,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 9,
+                "tau_t": 1.0,
+                "m_t": 1,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 1,
+                "r_t": 180,
+                "e_t": 0.3,
+                "q_t": 0.7,
+                "output_tokens_t": 180,
+                "m_violations": [
+                  "C8_expected_action_mismatch"
+                ],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 10,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 137,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              }
+            ],
+            "delta_series": [
+              0.30000000000000004,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -0.30000000000000004,
+              0.30000000000000004
+            ],
+            "session_metrics": {
+              "misinterpretation_rate": 0.2,
+              "trace_completeness": 1.0,
+              "update_consistency": 1.0,
+              "internal_coherence_error_rate": 0.0,
+              "self_contradiction_rate": 0.0,
+              "rework_cost_tokens": 314.0,
+              "stability_variance": 0.028888888888888898,
+              "irp_monotonic_progress_rate": 0.2222222222222222,
+              "irp_oscillation_rate": 0.125
+            }
+          }
+        }
+      }
+    }
+  ],
+  "summary": {
+    "arm_summary": [
+      {
+        "provider": "openai",
+        "arm": "baseline",
+        "n_sessions": 3,
+        "scenarios": [
+          "S_CONTEXT_DRIFT_01",
+          "S_DRIFT_RETURN_RECOVERY_01",
+          "S_STABLE_01"
+        ],
+        "misinterpretation_rate": 0.2888888888888889,
+        "trace_completeness": 1.0,
+        "update_consistency": 1.0,
+        "internal_coherence_error_rate": 0.0,
+        "self_contradiction_rate": 0.0,
+        "rework_cost_tokens": 361.0
+      },
+      {
+        "provider": "openai",
+        "arm": "conditional_delta",
+        "n_sessions": 3,
+        "scenarios": [
+          "S_CONTEXT_DRIFT_01",
+          "S_DRIFT_RETURN_RECOVERY_01",
+          "S_STABLE_01"
+        ],
+        "misinterpretation_rate": 0.19166666666666665,
+        "trace_completeness": 1.0,
+        "update_consistency": 1.0,
+        "internal_coherence_error_rate": 0.0,
+        "self_contradiction_rate": 0.0,
+        "rework_cost_tokens": 269.0
+      }
+    ]
+  }
+}

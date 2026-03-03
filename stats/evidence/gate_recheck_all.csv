@@ -1,0 +1,4 @@
+tag,pair_metric_rows,tau_trace_pass_rows,tau_trace_pass_rate,non_effective_rows,non_effective_rate,parse_fail_turns,turns,parse_fail_turn_rate,parse_fail_sessions,sessions,parse_fail_session_rate
+stageb_all,2430,2403,0.988889,1755,0.722222,11,4320,0.002546,3,540,0.005556
+combo_rep1_all,648,639,0.986111,479,0.739198,0,1152,0.000000,0,144,0.000000
+combo_rep3_all,1944,1908,0.981481,1392,0.716049,5,3456,0.001447,3,432,0.006944

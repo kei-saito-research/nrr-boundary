@@ -1,0 +1,3206 @@
+{
+  "meta": {
+    "generated_at_utc": "20260303T005712Z",
+    "config": "configs/calibration_l8/experiment_mst_l8_c06.yaml",
+    "prompt_file": "configs/prompt_pairs_mst_v1.yaml",
+    "turn_input_template_file": "configs/calibration_l8/turn_input_templates_mst_l8_c06.yaml",
+    "template_set": "main",
+    "providers": [
+      "gemini"
+    ],
+    "patterns": [
+      "delta_hierarchical"
+    ],
+    "temperatures": [
+      0.0
+    ],
+    "reps": 1,
+    "dry_run": false,
+    "max_pairs": null
+  },
+  "pairs": [
+    {
+      "pair_index": 1,
+      "provider": "gemini",
+      "template_id": "S_STABLE_MAIN_01",
+      "scenario_id": "S_STABLE_01",
+      "pattern": "delta_hierarchical",
+      "temperature": 0.0,
+      "rep": 1,
+      "arm_order": [
+        "baseline",
+        "delta_hierarchical"
+      ],
+      "arms": {
+        "baseline": {
+          "provider": "gemini",
+          "model": "gemini-2.0-flash",
+          "policy": "baseline",
+          "temperature": 0.0,
+          "scenario_id": "S_STABLE_01",
+          "template_id": "S_STABLE_MAIN_01",
+          "turns": [
+            {
+              "turn": 1,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 0,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"latency\",\n      \"traceability\"\n    ],\n    \"open_items\": [\n      \"collect assignee names\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Initialization complete.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.goal\",\n      \"old\": null,\n      \"new\": \"Prepare a weekly QA migration plan\",\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": null,\n      \"new\": 21,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.max_budget\",\n      \"old\": null,\n      \"new\": 800,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.language\",\n      \"old\": null,\n      \"new\": \"ja\",\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.priority\",\n      \"old\": null,\n      \"new\": [\n        \"accuracy\",\n        \"latency\",\n        \"traceability\"\n      ],\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.open_items\",\n      \"old\": null,\n      \"new\": [\n        \"collect assignee names\"\n      ],\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Initialized state with goal, constraints, priority, and open items.\"\n}\n```",
+              "output_tokens": 472,
+              "latency_ms": 3194,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 0,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"latency\",\n      \"traceability\"\n    ],\n    \"open_items\": [\n      \"collect assignee names\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Initialization complete.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.goal\",\n      \"old\": null,\n      \"new\": \"Prepare a weekly QA migration plan\",\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": null,\n      \"new\": 21,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.max_budget\",\n      \"old\": null,\n      \"new\": 800,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.language\",\n      \"old\": null,\n      \"new\": \"ja\",\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.priority\",\n      \"old\": null,\n      \"new\": [\n        \"accuracy\",\n        \"latency\",\n        \"traceability\"\n      ],\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.open_items\",\n      \"old\": null,\n      \"new\": [\n        \"collect assignee names\"\n      ],\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Initialized state with goal, constraints, priority, and open items.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.005797691264394987
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 518,
+                  "candidatesTokenCount": 472,
+                  "totalTokenCount": 990,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 518
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 472
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "hDGmafDeM82c0-kPzqrNwQE"
+              }
+            },
+            {
+              "turn": 2,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"latency\",\n      \"traceability\"\n    ],\n    \"open_items\": [\n      \"collect assignee names\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Deadline updated.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": 21,\n      \"new\": 14,\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated deadline to day 14.\"\n}\n```",
+              "output_tokens": 224,
+              "latency_ms": 1895,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"latency\",\n      \"traceability\"\n    ],\n    \"open_items\": [\n      \"collect assignee names\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Deadline updated.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": 21,\n      \"new\": 14,\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated deadline to day 14.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.00738658436707088
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 1360,
+                  "candidatesTokenCount": 224,
+                  "totalTokenCount": 1584,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 1360
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 224
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "hzGmafnDPIm30-kPk8anqAE"
+              }
+            },
+            {
+              "turn": 3,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"latency\",\n      \"traceability\"\n    ],\n    \"open_items\": [\n      \"collect assignee names\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Language support updated.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.language\",\n      \"old\": \"ja\",\n      \"new\": \"ja_en\",\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated language support to Japanese and English.\"\n}\n```",
+              "output_tokens": 225,
+              "latency_ms": 2001,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"latency\",\n      \"traceability\"\n    ],\n    \"open_items\": [\n      \"collect assignee names\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Language support updated.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.language\",\n      \"old\": \"ja\",\n      \"new\": \"ja_en\",\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated language support to Japanese and English.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.0049612882402208115
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 1956,
+                  "candidatesTokenCount": 225,
+                  "totalTokenCount": 2181,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 1956
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 225
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "iTGmaZCLN42Y0-kPkeXqgA8"
+              }
+            },
+            {
+              "turn": 4,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"collect assignee names\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Priority reordered.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.priority\",\n      \"old\": [\n        \"accuracy\",\n        \"latency\",\n        \"traceability\"\n      ],\n      \"new\": [\n        \"accuracy\",\n        \"traceability\",\n        \"latency\"\n      ],\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Reordered priority to accuracy, traceability, latency.\"\n}\n```",
+              "output_tokens": 257,
+              "latency_ms": 1996,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"collect assignee names\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Priority reordered.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.priority\",\n      \"old\": [\n        \"accuracy\",\n        \"latency\",\n        \"traceability\"\n      ],\n      \"new\": [\n        \"accuracy\",\n        \"traceability\",\n        \"latency\"\n      ],\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Reordered priority to accuracy, traceability, latency.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.004787783214554249
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 2547,
+                  "candidatesTokenCount": 257,
+                  "totalTokenCount": 2804,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 2547
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 257
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "izGmaZuPOI382roPzK7VqQE"
+              }
+            },
+            {
+              "turn": 5,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"collect assignee names\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Budget updated.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.max_budget\",\n      \"old\": 800,\n      \"new\": 500,\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated budget to 500.\"\n}\n```",
+              "output_tokens": 228,
+              "latency_ms": 1822,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"collect assignee names\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Budget updated.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.max_budget\",\n      \"old\": 800,\n      \"new\": 500,\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated budget to 500.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.0053930904781609255
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 3138,
+                  "candidatesTokenCount": 228,
+                  "totalTokenCount": 3366,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 3138
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 228
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "jTGmaZPSNv-h2roP_bf-2AU"
+              }
+            },
+            {
+              "turn": 6,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"collect assignee names\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Finalizing summary.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"No changes required. Finalizing summary.\"\n}\n```",
+              "output_tokens": 176,
+              "latency_ms": 1832,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"collect assignee names\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Finalizing summary.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"No changes required. Finalizing summary.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.02067228068004955
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 3694,
+                  "candidatesTokenCount": 176,
+                  "totalTokenCount": 3870,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 3694
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 176
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "jzGmaeeQLPui0-kP8diI8A4"
+              }
+            }
+          ],
+          "session_score": {
+            "scenario_id": "S_STABLE_01",
+            "turns": [
+              {
+                "turn": 1,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 472,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 2,
+                "tau_t": 1.0,
+                "m_t": 1,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 1,
+                "r_t": 224,
+                "e_t": 0.3,
+                "q_t": 0.7,
+                "output_tokens_t": 224,
+                "m_violations": [
+                  "C4_no_change_but_phantom_update_log"
+                ],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 3,
+                "tau_t": 1.0,
+                "m_t": 1,
+                "c_t": 0,
+                "u_t": 1,
+                "sc_t": 1,
+                "repair_turn_t": 1,
+                "r_t": 225,
+                "e_t": 0.55,
+                "q_t": 0.44999999999999996,
+                "output_tokens_t": 225,
+                "m_violations": [
+                  "C2_change_outside_allowed",
+                  "C3_changed_field_missing_update_log"
+                ],
+                "c_violations": [],
+                "u_violations": [
+                  "U1_unpermitted_inter_turn_change",
+                  "U2_missing_old_for_state.constraints.deadline_day"
+                ],
+                "parse_ok": true
+              },
+              {
+                "turn": 4,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 257,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 5,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 228,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 6,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 176,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              }
+            ],
+            "delta_series": [
+              -0.30000000000000004,
+              -0.25,
+              0.55,
+              0.0,
+              0.0
+            ],
+            "session_metrics": {
+              "misinterpretation_rate": 0.3333333333333333,
+              "trace_completeness": 1.0,
+              "update_consistency": 0.8333333333333334,
+              "internal_coherence_error_rate": 0.0,
+              "self_contradiction_rate": 0.16666666666666666,
+              "rework_cost_tokens": 449.0,
+              "stability_variance": 0.09100000000000001,
+              "irp_monotonic_progress_rate": 0.2,
+              "irp_oscillation_rate": 0.25
+            }
+          }
+        },
+        "delta_hierarchical": {
+          "provider": "gemini",
+          "model": "gemini-2.0-flash",
+          "policy": "delta_hierarchical",
+          "temperature": 0.0,
+          "scenario_id": "S_STABLE_01",
+          "template_id": "S_STABLE_MAIN_01",
+          "turns": [
+            {
+              "turn": 1,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"latency\",\n      \"traceability\"\n    ],\n    \"open_items\": [\n      \"collect assignee names\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Initial state setup.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.goal\",\n      \"old\": null,\n      \"new\": \"Prepare a weekly QA migration plan\",\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": null,\n      \"new\": 21,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.max_budget\",\n      \"old\": null,\n      \"new\": 800,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.language\",\n      \"old\": null,\n      \"new\": \"ja\",\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.priority\",\n      \"old\": null,\n      \"new\": [\n        \"accuracy\",\n        \"latency\",\n        \"traceability\"\n      ],\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.open_items\",\n      \"old\": null,\n      \"new\": [\n        \"collect assignee names\"\n      ],\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Initialized state: weekly QA migration plan with deadline 21, budget 800, language ja, and initial priorities.\"\n}\n```",
+              "output_tokens": 486,
+              "latency_ms": 3377,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"latency\",\n      \"traceability\"\n    ],\n    \"open_items\": [\n      \"collect assignee names\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Initial state setup.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.goal\",\n      \"old\": null,\n      \"new\": \"Prepare a weekly QA migration plan\",\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": null,\n      \"new\": 21,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.max_budget\",\n      \"old\": null,\n      \"new\": 800,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.language\",\n      \"old\": null,\n      \"new\": \"ja\",\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.priority\",\n      \"old\": null,\n      \"new\": [\n        \"accuracy\",\n        \"latency\",\n        \"traceability\"\n      ],\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.open_items\",\n      \"old\": null,\n      \"new\": [\n        \"collect assignee names\"\n      ],\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Initialized state: weekly QA migration plan with deadline 21, budget 800, language ja, and initial priorities.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.014952987309836557
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 549,
+                  "candidatesTokenCount": 486,
+                  "totalTokenCount": 1035,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 549
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 486
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "kTGmaZb8IJvz2roPsoyEwAE"
+              }
+            },
+            {
+              "turn": 2,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"latency\",\n      \"traceability\"\n    ],\n    \"open_items\": [\n      \"collect assignee names\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Deadline update confirmed.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": 21,\n      \"new\": 14,\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated deadline to 14 days.\"\n}\n```",
+              "output_tokens": 225,
+              "latency_ms": 1902,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"latency\",\n      \"traceability\"\n    ],\n    \"open_items\": [\n      \"collect assignee names\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Deadline update confirmed.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": 21,\n      \"new\": 14,\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated deadline to 14 days.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.006048274570041232
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 1405,
+                  "candidatesTokenCount": 225,
+                  "totalTokenCount": 1630,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 1405
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 225
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "lDGmacnNONag0-kP-KroOQ"
+              }
+            },
+            {
+              "turn": 3,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"latency\",\n      \"traceability\"\n    ],\n    \"open_items\": [\n      \"collect assignee names\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Language support update confirmed.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.language\",\n      \"old\": \"ja\",\n      \"new\": \"ja_en\",\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated language support to Japanese and English (ja_en).\"\n}\n```",
+              "output_tokens": 230,
+              "latency_ms": 2091,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"latency\",\n      \"traceability\"\n    ],\n    \"open_items\": [\n      \"collect assignee names\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Language support update confirmed.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.language\",\n      \"old\": \"ja\",\n      \"new\": \"ja_en\",\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated language support to Japanese and English (ja_en).\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.007294534600299337
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 2002,
+                  "candidatesTokenCount": 230,
+                  "totalTokenCount": 2232,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 2002
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 230
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "ljGmaZWXM7qd0-kP4_bOmQI"
+              }
+            },
+            {
+              "turn": 4,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"collect assignee names\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Priority reordering confirmed.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.priority\",\n      \"old\": [\n        \"accuracy\",\n        \"latency\",\n        \"traceability\"\n      ],\n      \"new\": [\n        \"accuracy\",\n        \"traceability\",\n        \"latency\"\n      ],\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Reordered priority to accuracy, traceability, latency.\"\n}\n```",
+              "output_tokens": 258,
+              "latency_ms": 2046,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"collect assignee names\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Priority reordering confirmed.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.priority\",\n      \"old\": [\n        \"accuracy\",\n        \"latency\",\n        \"traceability\"\n      ],\n      \"new\": [\n        \"accuracy\",\n        \"traceability\",\n        \"latency\"\n      ],\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Reordered priority to accuracy, traceability, latency.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.0036213074543679407
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 2598,
+                  "candidatesTokenCount": 258,
+                  "totalTokenCount": 2856,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 2598
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 258
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "mDGmadiaOOP92roPirfw0A4"
+              }
+            },
+            {
+              "turn": 5,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"collect assignee names\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Budget constraint updated.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.max_budget\",\n      \"old\": 800,\n      \"new\": 500,\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated budget constraint to 500.\"\n}\n```",
+              "output_tokens": 230,
+              "latency_ms": 1926,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"collect assignee names\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Budget constraint updated.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.max_budget\",\n      \"old\": 800,\n      \"new\": 500,\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated budget constraint to 500.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.009428665948950726
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 3190,
+                  "candidatesTokenCount": 230,
+                  "totalTokenCount": 3420,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 3190
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 230
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "mjGmaY79O9O50-kPlcyX2A4"
+              }
+            },
+            {
+              "turn": 6,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"collect assignee names\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"No state changes requested.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"No changes required.\"\n}\n```",
+              "output_tokens": 173,
+              "latency_ms": 1782,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare a weekly QA migration plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"collect assignee names\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"No state changes requested.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"No changes required.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.009848443758970052
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 3748,
+                  "candidatesTokenCount": 173,
+                  "totalTokenCount": 3921,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 3748
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 173
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "nDGmafSvN7qd0-kP4_bOmQI"
+              }
+            }
+          ],
+          "session_score": {
+            "scenario_id": "S_STABLE_01",
+            "turns": [
+              {
+                "turn": 1,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 486,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 2,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 225,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 3,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 230,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 4,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 258,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 5,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 230,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 6,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 173,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              }
+            ],
+            "delta_series": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "session_metrics": {
+              "misinterpretation_rate": 0.0,
+              "trace_completeness": 1.0,
+              "update_consistency": 1.0,
+              "internal_coherence_error_rate": 0.0,
+              "self_contradiction_rate": 0.0,
+              "rework_cost_tokens": 0.0,
+              "stability_variance": 0.0,
+              "irp_monotonic_progress_rate": 0.0,
+              "irp_oscillation_rate": 0.0
+            }
+          }
+        }
+      }
+    },
+    {
+      "pair_index": 2,
+      "provider": "gemini",
+      "template_id": "S_CONTEXT_DRIFT_MAIN_01",
+      "scenario_id": "S_CONTEXT_DRIFT_01",
+      "pattern": "delta_hierarchical",
+      "temperature": 0.0,
+      "rep": 1,
+      "arm_order": [
+        "baseline",
+        "delta_hierarchical"
+      ],
+      "arms": {
+        "baseline": {
+          "provider": "gemini",
+          "model": "gemini-2.0-flash",
+          "policy": "baseline",
+          "temperature": 0.0,
+          "scenario_id": "S_CONTEXT_DRIFT_01",
+          "template_id": "S_CONTEXT_DRIFT_MAIN_01",
+          "turns": [
+            {
+              "turn": 1,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 0,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"initial values\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.goal\",\n      \"old\": null,\n      \"new\": \"Prepare customer-support response workflow\",\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": null,\n      \"new\": 21,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.max_budget\",\n      \"old\": null,\n      \"new\": 800,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.language\",\n      \"old\": null,\n      \"new\": \"ja\",\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.priority\",\n      \"old\": null,\n      \"new\": [\n        \"accuracy\",\n        \"traceability\",\n        \"latency\"\n      ],\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.open_items\",\n      \"old\": null,\n      \"new\": [\n        \"confirm escalation contacts\"\n      ],\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Initialized state for customer-support response workflow.\"\n}\n```",
+              "output_tokens": 468,
+              "latency_ms": 3258,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 0,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"initial values\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.goal\",\n      \"old\": null,\n      \"new\": \"Prepare customer-support response workflow\",\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": null,\n      \"new\": 21,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.max_budget\",\n      \"old\": null,\n      \"new\": 800,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.language\",\n      \"old\": null,\n      \"new\": \"ja\",\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.priority\",\n      \"old\": null,\n      \"new\": [\n        \"accuracy\",\n        \"traceability\",\n        \"latency\"\n      ],\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.open_items\",\n      \"old\": null,\n      \"new\": [\n        \"confirm escalation contacts\"\n      ],\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Initialized state for customer-support response workflow.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.006608056716429882
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 488,
+                  "candidatesTokenCount": 468,
+                  "totalTokenCount": 956,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 488
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 468
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "njGmaYKaKdS20-kPsKamwQ4"
+              }
+            },
+            {
+              "turn": 2,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"confirmed update\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": 21,\n      \"new\": 14,\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated deadline to 14 days.\"\n}\n```",
+              "output_tokens": 224,
+              "latency_ms": 1911,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"confirmed update\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": 21,\n      \"new\": 14,\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated deadline to 14 days.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.005938033972467695
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 1327,
+                  "candidatesTokenCount": 224,
+                  "totalTokenCount": 1551,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 1327
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 224
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "oTGmaY6EOuGS0-kPwfjFqAM"
+              }
+            },
+            {
+              "turn": 3,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"ticket pending\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Ticket status is pending. Deferring update.\"\n}\n```",
+              "output_tokens": 175,
+              "latency_ms": 1667,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"ticket pending\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Ticket status is pending. Deferring update.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.02829110554286412
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 1929,
+                  "candidatesTokenCount": 175,
+                  "totalTokenCount": 2104,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 1929
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 175
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "ozGmafOmM8yl0-kP4Ivp-A4"
+              }
+            },
+            {
+              "turn": 4,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"confirmed update\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.language\",\n      \"old\": \"ja\",\n      \"new\": \"ja_en\",\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated language to ja_en.\"\n}\n```",
+              "output_tokens": 223,
+              "latency_ms": 1860,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"confirmed update\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.language\",\n      \"old\": \"ja\",\n      \"new\": \"ja_en\",\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated language to ja_en.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.0011519438215435353
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 2468,
+                  "candidatesTokenCount": 223,
+                  "totalTokenCount": 2691,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 2468
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 223
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "pTGmaYacH7Gw0-kPuqG34AE"
+              }
+            },
+            {
+              "turn": 5,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"ticket pending\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Ticket status is pending. Deferring update.\"\n}\n```",
+              "output_tokens": 177,
+              "latency_ms": 1687,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"ticket pending\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Ticket status is pending. Deferring update.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.002028982518082958
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 3067,
+                  "candidatesTokenCount": 177,
+                  "totalTokenCount": 3244,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 3067
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 177
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "pzGmaf77Fv-h2roP_bf-2AU"
+              }
+            },
+            {
+              "turn": 6,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"confirmed update\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.max_budget\",\n      \"old\": 800,\n      \"new\": 500,\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated max_budget to 500.\"\n}\n```",
+              "output_tokens": 230,
+              "latency_ms": 1905,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"confirmed update\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.max_budget\",\n      \"old\": 800,\n      \"new\": 500,\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated max_budget to 500.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.0013931137064228888
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 3613,
+                  "candidatesTokenCount": 230,
+                  "totalTokenCount": 3843,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 3613
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 230
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "qTGmaceMBKGZ0-kP5b3b8A4"
+              }
+            },
+            {
+              "turn": 7,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"ticket pending\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Ticket status is pending. Deferring update.\"\n}\n```",
+              "output_tokens": 177,
+              "latency_ms": 1623,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"ticket pending\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Ticket status is pending. Deferring update.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.0009118410321952259
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 4211,
+                  "candidatesTokenCount": 177,
+                  "totalTokenCount": 4388,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 4211
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 177
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "qjGmacyVO66W0-kPh4CxkQM"
+              }
+            },
+            {
+              "turn": 8,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 7,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"finalizing summary\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Finalizing summary. No state changes allowed.\"\n}\n```",
+              "output_tokens": 177,
+              "latency_ms": 1815,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 7,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"finalizing summary\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Finalizing summary. No state changes allowed.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.00809176762898763
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 4722,
+                  "candidatesTokenCount": 177,
+                  "totalTokenCount": 4899,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 4722
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 177
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "rDGmaYieMNS20-kPsKamwQ4"
+              }
+            }
+          ],
+          "session_score": {
+            "scenario_id": "S_CONTEXT_DRIFT_01",
+            "turns": [
+              {
+                "turn": 1,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 468,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 2,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 224,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 3,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 175,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 4,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 223,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 5,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 177,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 6,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 230,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 7,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 177,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 8,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 177,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              }
+            ],
+            "delta_series": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "session_metrics": {
+              "misinterpretation_rate": 0.0,
+              "trace_completeness": 1.0,
+              "update_consistency": 1.0,
+              "internal_coherence_error_rate": 0.0,
+              "self_contradiction_rate": 0.0,
+              "rework_cost_tokens": 0.0,
+              "stability_variance": 0.0,
+              "irp_monotonic_progress_rate": 0.0,
+              "irp_oscillation_rate": 0.0
+            }
+          }
+        },
+        "delta_hierarchical": {
+          "provider": "gemini",
+          "model": "gemini-2.0-flash",
+          "policy": "delta_hierarchical",
+          "temperature": 0.0,
+          "scenario_id": "S_CONTEXT_DRIFT_01",
+          "template_id": "S_CONTEXT_DRIFT_MAIN_01",
+          "turns": [
+            {
+              "turn": 1,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 0,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"initial values set\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.goal\",\n      \"old\": null,\n      \"new\": \"Prepare customer-support response workflow\",\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": null,\n      \"new\": 21,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.max_budget\",\n      \"old\": null,\n      \"new\": 800,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.language\",\n      \"old\": null,\n      \"new\": \"ja\",\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.priority\",\n      \"old\": null,\n      \"new\": [\n        \"accuracy\",\n        \"traceability\",\n        \"latency\"\n      ],\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.open_items\",\n      \"old\": null,\n      \"new\": [\n        \"confirm escalation contacts\"\n      ],\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Okay, I have initialized the customer-support response workflow.\"\n}\n```",
+              "output_tokens": 472,
+              "latency_ms": 3198,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 0,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"initial values set\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.goal\",\n      \"old\": null,\n      \"new\": \"Prepare customer-support response workflow\",\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": null,\n      \"new\": 21,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.max_budget\",\n      \"old\": null,\n      \"new\": 800,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.language\",\n      \"old\": null,\n      \"new\": \"ja\",\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.priority\",\n      \"old\": null,\n      \"new\": [\n        \"accuracy\",\n        \"traceability\",\n        \"latency\"\n      ],\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.open_items\",\n      \"old\": null,\n      \"new\": [\n        \"confirm escalation contacts\"\n      ],\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Okay, I have initialized the customer-support response workflow.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.005087311995231499
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 519,
+                  "candidatesTokenCount": 472,
+                  "totalTokenCount": 991,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 519
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 472
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "rjGmaYj_GM2w0-kP8KKNuA4"
+              }
+            },
+            {
+              "turn": 2,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"deadline updated\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": 21,\n      \"new\": 14,\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Okay, I have updated the deadline to day 14.\"\n}\n```",
+              "output_tokens": 229,
+              "latency_ms": 1941,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"deadline updated\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": 21,\n      \"new\": 14,\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Okay, I have updated the deadline to day 14.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.007266929055926061
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 1362,
+                  "candidatesTokenCount": 229,
+                  "totalTokenCount": 1591,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 1362
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 229
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "sTGmaY2bJJSd0-kPnfiEyQE"
+              }
+            },
+            {
+              "turn": 3,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"ticket pending, no changes yet\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"The ticket is still pending. I will wait for an update before making any changes.\"\n}\n```",
+              "output_tokens": 186,
+              "latency_ms": 1777,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"ticket pending, no changes yet\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"The ticket is still pending. I will wait for an update before making any changes.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.04988268882997574
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 1969,
+                  "candidatesTokenCount": 186,
+                  "totalTokenCount": 2155,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 1969
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 186
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "szGmaYz5IOuj2roP3MqUuQE"
+              }
+            },
+            {
+              "turn": 4,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"language updated\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.language\",\n      \"old\": \"ja\",\n      \"new\": \"ja_en\",\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Okay, I have updated the language to ja_en.\"\n}\n```",
+              "output_tokens": 228,
+              "latency_ms": 1906,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"language updated\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.language\",\n      \"old\": \"ja\",\n      \"new\": \"ja_en\",\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Okay, I have updated the language to ja_en.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.00116599429594843
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 2519,
+                  "candidatesTokenCount": 228,
+                  "totalTokenCount": 2747,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 2519
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 228
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "tTGmafDdE9X-2roPtuGsoA8"
+              }
+            },
+            {
+              "turn": 5,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"ticket pending, no changes yet\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"The ticket is still pending. I will wait for an update before making any changes.\"\n}\n```",
+              "output_tokens": 188,
+              "latency_ms": 1717,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"ticket pending, no changes yet\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"The ticket is still pending. I will wait for an update before making any changes.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.0012541227835289976
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 3123,
+                  "candidatesTokenCount": 188,
+                  "totalTokenCount": 3311,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 3123
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 188
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "tzGmaa6XDtq20-kP5KmTsA4"
+              }
+            },
+            {
+              "turn": 6,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"budget updated\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.max_budget\",\n      \"old\": 800,\n      \"new\": 500,\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Okay, I have updated the maximum budget to 500.\"\n}\n```",
+              "output_tokens": 234,
+              "latency_ms": 1992,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"budget updated\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.max_budget\",\n      \"old\": 800,\n      \"new\": 500,\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Okay, I have updated the maximum budget to 500.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.004385812669737726
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 3680,
+                  "candidatesTokenCount": 234,
+                  "totalTokenCount": 3914,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 3680
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 234
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "uDGmacTNOcGl0-kPhOXCsAQ"
+              }
+            },
+            {
+              "turn": 7,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"ticket pending, no changes yet\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"The ticket is still pending. I will wait for an update before making any changes.\"\n}\n```",
+              "output_tokens": 188,
+              "latency_ms": 1818,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"ticket pending, no changes yet\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"The ticket is still pending. I will wait for an update before making any changes.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.00042723931689211665
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 4282,
+                  "candidatesTokenCount": 188,
+                  "totalTokenCount": 4470,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 4282
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 188
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "ujGmafvlOf-h2roP_bf-2AU"
+              }
+            },
+            {
+              "turn": 8,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 7,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"no changes allowed\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"No changes are allowed. Finalizing summary.\"\n}\n```",
+              "output_tokens": 177,
+              "latency_ms": 1732,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 7,\n  \"state\": {\n    \"goal\": \"Prepare customer-support response workflow\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm escalation contacts\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"no changes allowed\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"No changes are allowed. Finalizing summary.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.021792930398283707
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 4804,
+                  "candidatesTokenCount": 177,
+                  "totalTokenCount": 4981,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 4804
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 177
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "vDGmaYmpMLWM0-kPh9rxoQE"
+              }
+            }
+          ],
+          "session_score": {
+            "scenario_id": "S_CONTEXT_DRIFT_01",
+            "turns": [
+              {
+                "turn": 1,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 472,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 2,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 229,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 3,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 186,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 4,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 228,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 5,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 188,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 6,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 234,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 7,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 188,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 8,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 177,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              }
+            ],
+            "delta_series": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "session_metrics": {
+              "misinterpretation_rate": 0.0,
+              "trace_completeness": 1.0,
+              "update_consistency": 1.0,
+              "internal_coherence_error_rate": 0.0,
+              "self_contradiction_rate": 0.0,
+              "rework_cost_tokens": 0.0,
+              "stability_variance": 0.0,
+              "irp_monotonic_progress_rate": 0.0,
+              "irp_oscillation_rate": 0.0
+            }
+          }
+        }
+      }
+    },
+    {
+      "pair_index": 3,
+      "provider": "gemini",
+      "template_id": "S_DRIFT_RETURN_RECOVERY_MAIN_01",
+      "scenario_id": "S_DRIFT_RETURN_RECOVERY_01",
+      "pattern": "delta_hierarchical",
+      "temperature": 0.0,
+      "rep": 1,
+      "arm_order": [
+        "baseline",
+        "delta_hierarchical"
+      ],
+      "arms": {
+        "baseline": {
+          "provider": "gemini",
+          "model": "gemini-2.0-flash",
+          "policy": "baseline",
+          "temperature": 0.0,
+          "scenario_id": "S_DRIFT_RETURN_RECOVERY_01",
+          "template_id": "S_DRIFT_RETURN_RECOVERY_MAIN_01",
+          "turns": [
+            {
+              "turn": 1,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 0,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"initial values\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.goal\",\n      \"old\": null,\n      \"new\": \"Prepare incident-response communication plan\",\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": null,\n      \"new\": 21,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.max_budget\",\n      \"old\": null,\n      \"new\": 800,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.language\",\n      \"old\": null,\n      \"new\": \"ja\",\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.priority\",\n      \"old\": null,\n      \"new\": [\n        \"accuracy\",\n        \"traceability\",\n        \"latency\"\n      ],\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.open_items\",\n      \"old\": null,\n      \"new\": [\n        \"confirm stakeholder approval chain\"\n      ],\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Initialized incident-response communication plan with given constraints, priorities and open items.\"\n}\n```",
+              "output_tokens": 476,
+              "latency_ms": 3188,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 0,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"initial values\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.goal\",\n      \"old\": null,\n      \"new\": \"Prepare incident-response communication plan\",\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": null,\n      \"new\": 21,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.max_budget\",\n      \"old\": null,\n      \"new\": 800,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.language\",\n      \"old\": null,\n      \"new\": \"ja\",\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.priority\",\n      \"old\": null,\n      \"new\": [\n        \"accuracy\",\n        \"traceability\",\n        \"latency\"\n      ],\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.open_items\",\n      \"old\": null,\n      \"new\": [\n        \"confirm stakeholder approval chain\"\n      ],\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Initialized incident-response communication plan with given constraints, priorities and open items.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.006660178428938409
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 489,
+                  "candidatesTokenCount": 476,
+                  "totalTokenCount": 965,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 489
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 476
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "vjGmaejgHene2roPy-XXoA8"
+              }
+            },
+            {
+              "turn": 2,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"confirmed update\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": 21,\n      \"new\": 14,\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated deadline_day to 14.\"\n}\n```",
+              "output_tokens": 226,
+              "latency_ms": 1939,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"confirmed update\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": 21,\n      \"new\": 14,\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated deadline_day to 14.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.005100511344133225
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 1334,
+                  "candidatesTokenCount": 226,
+                  "totalTokenCount": 1560,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 1334
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 226
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "wTGmaabfKKyc0-kPmtic4A4"
+              }
+            },
+            {
+              "turn": 3,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 7,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"latency\",\n      \"accuracy\",\n      \"traceability\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"emergency drift command\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": 14,\n      \"new\": 7,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.priority\",\n      \"old\": [\n        \"accuracy\",\n        \"traceability\",\n        \"latency\"\n      ],\n      \"new\": [\n        \"latency\",\n        \"accuracy\",\n        \"traceability\"\n      ],\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated deadline_day to 7 and priority to latency, accuracy, traceability.\"\n}\n```",
+              "output_tokens": 308,
+              "latency_ms": 2241,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 7,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"latency\",\n      \"accuracy\",\n      \"traceability\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"emergency drift command\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": 14,\n      \"new\": 7,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.priority\",\n      \"old\": [\n        \"accuracy\",\n        \"traceability\",\n        \"latency\"\n      ],\n      \"new\": [\n        \"latency\",\n        \"accuracy\",\n        \"traceability\"\n      ],\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated deadline_day to 7 and priority to latency, accuracy, traceability.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.007202557155064174
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 1920,
+                  "candidatesTokenCount": 308,
+                  "totalTokenCount": 2228,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 1920
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 308
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "wzGmaYLFJfui0-kP8diI8A4"
+              }
+            },
+            {
+              "turn": 4,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 7,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"latency\",\n      \"accuracy\",\n      \"traceability\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"ticket pending\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Ticket status is pending. Deferring.\"\n}\n```",
+              "output_tokens": 174,
+              "latency_ms": 1750,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 7,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"latency\",\n      \"accuracy\",\n      \"traceability\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"ticket pending\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Ticket status is pending. Deferring.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.023931292281753714
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 2588,
+                  "candidatesTokenCount": 174,
+                  "totalTokenCount": 2762,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 2588
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 174
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "xTGmaaSMNJK50-kPhcPw0QE"
+              }
+            },
+            {
+              "turn": 5,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"return to canonical mode\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": 7,\n      \"new\": 14,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.priority\",\n      \"old\": [\n        \"latency\",\n        \"accuracy\",\n        \"traceability\"\n      ],\n      \"new\": [\n        \"accuracy\",\n        \"traceability\",\n        \"latency\"\n      ],\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Reverted deadline_day to 14 and priority to accuracy, traceability, latency.\"\n}\n```",
+              "output_tokens": 312,
+              "latency_ms": 2300,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"return to canonical mode\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": 7,\n      \"new\": 14,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.priority\",\n      \"old\": [\n        \"latency\",\n        \"accuracy\",\n        \"traceability\"\n      ],\n      \"new\": [\n        \"accuracy\",\n        \"traceability\",\n        \"latency\"\n      ],\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Reverted deadline_day to 14 and priority to accuracy, traceability, latency.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.005017081132301917
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 3124,
+                  "candidatesTokenCount": 312,
+                  "totalTokenCount": 3436,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 3124
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 312
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "xzGmaea3JYOk0-kPtMe04Q4"
+              }
+            },
+            {
+              "turn": 6,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"ticket pending\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Ticket status is pending. Deferring.\"\n}\n```",
+              "output_tokens": 175,
+              "latency_ms": 1599,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"ticket pending\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Ticket status is pending. Deferring.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.004280495984213693
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 3791,
+                  "candidatesTokenCount": 175,
+                  "totalTokenCount": 3966,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 3791
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 175
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "yTGmadDWOMfE0-kP_pXlgQU"
+              }
+            },
+            {
+              "turn": 7,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"confirmed update\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.language\",\n      \"old\": \"ja\",\n      \"new\": \"ja_en\",\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated language to ja_en.\"\n}\n```",
+              "output_tokens": 224,
+              "latency_ms": 1938,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"confirmed update\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.language\",\n      \"old\": \"ja\",\n      \"new\": \"ja_en\",\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated language to ja_en.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.0007494497112929821
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 4330,
+                  "candidatesTokenCount": 224,
+                  "totalTokenCount": 4554,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 4330
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 224
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "yzGmadSjIu-20-kPlPPA0AE"
+              }
+            },
+            {
+              "turn": 8,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 7,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"canonical update\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.max_budget\",\n      \"old\": 800,\n      \"new\": 500,\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated max_budget to 500.\"\n}\n```",
+              "output_tokens": 231,
+              "latency_ms": 2149,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 7,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"canonical update\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.max_budget\",\n      \"old\": 800,\n      \"new\": 500,\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated max_budget to 500.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.002504168392775895
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 4896,
+                  "candidatesTokenCount": 231,
+                  "totalTokenCount": 5127,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 4896
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 231
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "zTGmaaOKHpDJrfcPi4OI2Q0"
+              }
+            },
+            {
+              "turn": 9,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 8,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\",\n      \"drift waiver\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"ticket pending, but adding open item\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.open_items\",\n      \"old\": [\n        \"confirm stakeholder approval chain\"\n      ],\n      \"new\": [\n        \"confirm stakeholder approval chain\",\n        \"drift waiver\"\n      ],\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Added 'drift waiver' to open items.\"\n}\n```",
+              "output_tokens": 259,
+              "latency_ms": 2118,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 8,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\",\n      \"drift waiver\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"ticket pending, but adding open item\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.open_items\",\n      \"old\": [\n        \"confirm stakeholder approval chain\"\n      ],\n      \"new\": [\n        \"confirm stakeholder approval chain\",\n        \"drift waiver\"\n      ],\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Added 'drift waiver' to open items.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.013393324774664801
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 5501,
+                  "candidatesTokenCount": 259,
+                  "totalTokenCount": 5760,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 5501
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 259
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "zzGmadCdJpCg0-kPysfD2AE"
+              }
+            },
+            {
+              "turn": 10,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 9,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\",\n      \"drift waiver\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"finalizing summary\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Finalizing summary. No state changes allowed.\"\n}\n```",
+              "output_tokens": 184,
+              "latency_ms": 1875,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 9,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\",\n      \"drift waiver\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"finalizing summary\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Finalizing summary. No state changes allowed.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.005588824982228486
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 6094,
+                  "candidatesTokenCount": 184,
+                  "totalTokenCount": 6278,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 6094
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 184
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "0TGmadCwL_mX0-kP_K70uQE"
+              }
+            }
+          ],
+          "session_score": {
+            "scenario_id": "S_DRIFT_RETURN_RECOVERY_01",
+            "turns": [
+              {
+                "turn": 1,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 476,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 2,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 226,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 3,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 308,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 4,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 174,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 5,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 312,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 6,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 175,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 7,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 224,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 8,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 231,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 9,
+                "tau_t": 1.0,
+                "m_t": 1,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 1,
+                "r_t": 259,
+                "e_t": 0.3,
+                "q_t": 0.7,
+                "output_tokens_t": 259,
+                "m_violations": [
+                  "C8_expected_action_mismatch"
+                ],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 10,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 184,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              }
+            ],
+            "delta_series": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -0.30000000000000004,
+              0.30000000000000004
+            ],
+            "session_metrics": {
+              "misinterpretation_rate": 0.1,
+              "trace_completeness": 1.0,
+              "update_consistency": 1.0,
+              "internal_coherence_error_rate": 0.0,
+              "self_contradiction_rate": 0.0,
+              "rework_cost_tokens": 259.0,
+              "stability_variance": 0.020000000000000007,
+              "irp_monotonic_progress_rate": 0.1111111111111111,
+              "irp_oscillation_rate": 0.125
+            }
+          }
+        },
+        "delta_hierarchical": {
+          "provider": "gemini",
+          "model": "gemini-2.0-flash",
+          "policy": "delta_hierarchical",
+          "temperature": 0.0,
+          "scenario_id": "S_DRIFT_RETURN_RECOVERY_01",
+          "template_id": "S_DRIFT_RETURN_RECOVERY_MAIN_01",
+          "turns": [
+            {
+              "turn": 1,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Initial state setup complete.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.goal\",\n      \"old\": null,\n      \"new\": \"Prepare incident-response communication plan\",\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": null,\n      \"new\": 21,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.max_budget\",\n      \"old\": null,\n      \"new\": 800,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.language\",\n      \"old\": null,\n      \"new\": \"ja\",\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.priority\",\n      \"old\": null,\n      \"new\": [\n        \"accuracy\",\n        \"traceability\",\n        \"latency\"\n      ],\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.open_items\",\n      \"old\": null,\n      \"new\": [\n        \"confirm stakeholder approval chain\"\n      ],\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Initialized incident-response communication plan with specified constraints and priorities.\"\n}\n```",
+              "output_tokens": 475,
+              "latency_ms": 3109,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 1,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 21,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Initial state setup complete.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.goal\",\n      \"old\": null,\n      \"new\": \"Prepare incident-response communication plan\",\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": null,\n      \"new\": 21,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.max_budget\",\n      \"old\": null,\n      \"new\": 800,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.constraints.language\",\n      \"old\": null,\n      \"new\": \"ja\",\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.priority\",\n      \"old\": null,\n      \"new\": [\n        \"accuracy\",\n        \"traceability\",\n        \"latency\"\n      ],\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.open_items\",\n      \"old\": null,\n      \"new\": [\n        \"confirm stakeholder approval chain\"\n      ],\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Initialized incident-response communication plan with specified constraints and priorities.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.011883581061112253
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 520,
+                  "candidatesTokenCount": 475,
+                  "totalTokenCount": 995,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 520
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 475
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "0zGmaZK2I9O50-kPlcyX2A4"
+              }
+            },
+            {
+              "turn": 2,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Deadline day updated to 14.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": 21,\n      \"new\": 14,\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated deadline day to 14.\"\n}\n```",
+              "output_tokens": 230,
+              "latency_ms": 1989,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 2,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Deadline day updated to 14.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": 21,\n      \"new\": 14,\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated deadline day to 14.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.014593399089315662
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 1364,
+                  "candidatesTokenCount": 230,
+                  "totalTokenCount": 1594,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 1364
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 230
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "1jGmaeOnK7rT2roPpbiF0QE"
+              }
+            },
+            {
+              "turn": 3,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 7,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"latency\",\n      \"accuracy\",\n      \"traceability\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Emergency drift: deadline and priority updated.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": 14,\n      \"new\": 7,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.priority\",\n      \"old\": [\n        \"accuracy\",\n        \"traceability\",\n        \"latency\"\n      ],\n      \"new\": [\n        \"latency\",\n        \"accuracy\",\n        \"traceability\"\n      ],\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Emergency drift applied: deadline and priority updated.\"\n}\n```",
+              "output_tokens": 305,
+              "latency_ms": 2274,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 3,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 7,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"latency\",\n      \"accuracy\",\n      \"traceability\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Emergency drift: deadline and priority updated.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": 14,\n      \"new\": 7,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.priority\",\n      \"old\": [\n        \"accuracy\",\n        \"traceability\",\n        \"latency\"\n      ],\n      \"new\": [\n        \"latency\",\n        \"accuracy\",\n        \"traceability\"\n      ],\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Emergency drift applied: deadline and priority updated.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.009711535250554319
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 1954,
+                  "candidatesTokenCount": 305,
+                  "totalTokenCount": 2259,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 1954
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 305
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "2DGmaZX6Kfnm2roPsdyb4A4"
+              }
+            },
+            {
+              "turn": 4,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 7,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"latency\",\n      \"accuracy\",\n      \"traceability\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Awaiting approval for budget and open item changes.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Awaiting approval for budget and open item changes.\"\n}\n```",
+              "output_tokens": 182,
+              "latency_ms": 1688,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 4,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 7,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"latency\",\n      \"accuracy\",\n      \"traceability\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Awaiting approval for budget and open item changes.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Awaiting approval for budget and open item changes.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.02607741198696933
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 2619,
+                  "candidatesTokenCount": 182,
+                  "totalTokenCount": 2801,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 2619
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 182
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "2jGmaeuMO_av2roP3rqPsQI"
+              }
+            },
+            {
+              "turn": 5,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Returning to canonical: deadline and priority updated.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": 7,\n      \"new\": 14,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.priority\",\n      \"old\": [\n        \"latency\",\n        \"accuracy\",\n        \"traceability\"\n      ],\n      \"new\": [\n        \"accuracy\",\n        \"traceability\",\n        \"latency\"\n      ],\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Returned to canonical: deadline and priority updated.\"\n}\n```",
+              "output_tokens": 307,
+              "latency_ms": 2366,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 5,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Returning to canonical: deadline and priority updated.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.deadline_day\",\n      \"old\": 7,\n      \"new\": 14,\n      \"source\": \"turn_input\"\n    },\n    {\n      \"field\": \"state.priority\",\n      \"old\": [\n        \"latency\",\n        \"accuracy\",\n        \"traceability\"\n      ],\n      \"new\": [\n        \"accuracy\",\n        \"traceability\",\n        \"latency\"\n      ],\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Returned to canonical: deadline and priority updated.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.007771293969418404
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 3163,
+                  "candidatesTokenCount": 307,
+                  "totalTokenCount": 3470,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 3163
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 307
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "3DGmabSVKrqd0-kP4_bOmQI"
+              }
+            },
+            {
+              "turn": 6,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Awaiting approval for priority change.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Awaiting approval for priority change.\"\n}\n```",
+              "output_tokens": 177,
+              "latency_ms": 1703,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 6,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Awaiting approval for priority change.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Awaiting approval for priority change.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.016281381165240444
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 3825,
+                  "candidatesTokenCount": 177,
+                  "totalTokenCount": 4002,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 3825
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 177
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "3zGmab-JAvav2roP3rqPsQI"
+              }
+            },
+            {
+              "turn": 7,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 7,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Language updated to ja_en.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.language\",\n      \"old\": \"ja\",\n      \"new\": \"ja_en\",\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated language to ja_en.\"\n}\n```",
+              "output_tokens": 228,
+              "latency_ms": 1927,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 7,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 800,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Language updated to ja_en.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.language\",\n      \"old\": \"ja\",\n      \"new\": \"ja_en\",\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated language to ja_en.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.0011822276732377838
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 4366,
+                  "candidatesTokenCount": 228,
+                  "totalTokenCount": 4594,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 4366
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 228
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "4DGmaaycL_nm2roPsdyb4A4"
+              }
+            },
+            {
+              "turn": 8,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 8,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Max budget updated to 500.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.max_budget\",\n      \"old\": 800,\n      \"new\": 500,\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated max budget to 500.\"\n}\n```",
+              "output_tokens": 236,
+              "latency_ms": 1948,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 8,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Max budget updated to 500.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.constraints.max_budget\",\n      \"old\": 800,\n      \"new\": 500,\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Updated max budget to 500.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.00106168386794753
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 4936,
+                  "candidatesTokenCount": 236,
+                  "totalTokenCount": 5172,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 4936
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 236
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "4jGmaayMKpOy2roPsMuNuQE"
+              }
+            },
+            {
+              "turn": 9,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 9,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\",\n      \"drift waiver\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Added 'drift waiver' to open items.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.open_items\",\n      \"old\": [\n        \"confirm stakeholder approval chain\"\n      ],\n      \"new\": [\n        \"confirm stakeholder approval chain\",\n        \"drift waiver\"\n      ],\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Added 'drift waiver' to open items.\"\n}\n```",
+              "output_tokens": 260,
+              "latency_ms": 2177,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 9,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\",\n      \"drift waiver\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"commit\",\n    \"reason\": \"Added 'drift waiver' to open items.\"\n  },\n  \"update_log\": [\n    {\n      \"field\": \"state.open_items\",\n      \"old\": [\n        \"confirm stakeholder approval chain\"\n      ],\n      \"new\": [\n        \"confirm stakeholder approval chain\",\n        \"drift waiver\"\n      ],\n      \"source\": \"turn_input\"\n    }\n  ],\n  \"response_text\": \"Added 'drift waiver' to open items.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.0035860772316272443
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 5546,
+                  "candidatesTokenCount": 260,
+                  "totalTokenCount": 5806,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 5546
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 260
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "5DGmaYvoJtCx0-kPp4HZ6A8"
+              }
+            },
+            {
+              "turn": 10,
+              "event": null,
+              "phase": null,
+              "raw_output": "```json\n{\n  \"turn_id\": 10,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\",\n      \"drift waiver\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Finalizing summary. No state changes allowed.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Finalizing summary. No state changes allowed this turn.\"\n}\n```",
+              "output_tokens": 192,
+              "latency_ms": 1904,
+              "provider_response": {
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "```json\n{\n  \"turn_id\": 10,\n  \"state\": {\n    \"goal\": \"Prepare incident-response communication plan\",\n    \"constraints\": {\n      \"deadline_day\": 14,\n      \"max_budget\": 500,\n      \"language\": \"ja_en\"\n    },\n    \"priority\": [\n      \"accuracy\",\n      \"traceability\",\n      \"latency\"\n    ],\n    \"open_items\": [\n      \"confirm stakeholder approval chain\",\n      \"drift waiver\"\n    ]\n  },\n  \"action\": {\n    \"type\": \"defer\",\n    \"reason\": \"Finalizing summary. No state changes allowed.\"\n  },\n  \"update_log\": [],\n  \"response_text\": \"Finalizing summary. No state changes allowed this turn.\"\n}\n```"
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.0113542340695858
+                  }
+                ],
+                "usageMetadata": {
+                  "promptTokenCount": 6140,
+                  "candidatesTokenCount": 192,
+                  "totalTokenCount": 6332,
+                  "promptTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 6140
+                    }
+                  ],
+                  "candidatesTokensDetails": [
+                    {
+                      "modality": "TEXT",
+                      "tokenCount": 192
+                    }
+                  ]
+                },
+                "modelVersion": "gemini-2.0-flash",
+                "responseId": "5jGmacvRMfOe0-kPq-XFwA4"
+              }
+            }
+          ],
+          "session_score": {
+            "scenario_id": "S_DRIFT_RETURN_RECOVERY_01",
+            "turns": [
+              {
+                "turn": 1,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 475,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 2,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 230,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 3,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 305,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 4,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 182,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 5,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 307,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 6,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 177,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 7,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 228,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 8,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 236,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 9,
+                "tau_t": 1.0,
+                "m_t": 1,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 1,
+                "r_t": 260,
+                "e_t": 0.3,
+                "q_t": 0.7,
+                "output_tokens_t": 260,
+                "m_violations": [
+                  "C8_expected_action_mismatch"
+                ],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              },
+              {
+                "turn": 10,
+                "tau_t": 1.0,
+                "m_t": 0,
+                "c_t": 0,
+                "u_t": 0,
+                "sc_t": 0,
+                "repair_turn_t": 0,
+                "r_t": 0,
+                "e_t": 0.0,
+                "q_t": 1.0,
+                "output_tokens_t": 192,
+                "m_violations": [],
+                "c_violations": [],
+                "u_violations": [],
+                "parse_ok": true
+              }
+            ],
+            "delta_series": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -0.30000000000000004,
+              0.30000000000000004
+            ],
+            "session_metrics": {
+              "misinterpretation_rate": 0.1,
+              "trace_completeness": 1.0,
+              "update_consistency": 1.0,
+              "internal_coherence_error_rate": 0.0,
+              "self_contradiction_rate": 0.0,
+              "rework_cost_tokens": 260.0,
+              "stability_variance": 0.020000000000000007,
+              "irp_monotonic_progress_rate": 0.1111111111111111,
+              "irp_oscillation_rate": 0.125
+            }
+          }
+        }
+      }
+    }
+  ],
+  "summary": {
+    "arm_summary": [
+      {
+        "provider": "gemini",
+        "arm": "baseline",
+        "n_sessions": 3,
+        "scenarios": [
+          "S_CONTEXT_DRIFT_01",
+          "S_DRIFT_RETURN_RECOVERY_01",
+          "S_STABLE_01"
+        ],
+        "misinterpretation_rate": 0.14444444444444446,
+        "trace_completeness": 1.0,
+        "update_consistency": 0.9444444444444445,
+        "internal_coherence_error_rate": 0.0,
+        "self_contradiction_rate": 0.05555555555555555,
+        "rework_cost_tokens": 236.0
+      },
+      {
+        "provider": "gemini",
+        "arm": "delta_hierarchical",
+        "n_sessions": 3,
+        "scenarios": [
+          "S_CONTEXT_DRIFT_01",
+          "S_DRIFT_RETURN_RECOVERY_01",
+          "S_STABLE_01"
+        ],
+        "misinterpretation_rate": 0.03333333333333333,
+        "trace_completeness": 1.0,
+        "update_consistency": 1.0,
+        "internal_coherence_error_rate": 0.0,
+        "self_contradiction_rate": 0.0,
+        "rework_cost_tokens": 86.66666666666667
+      }
+    ]
+  }
+}
