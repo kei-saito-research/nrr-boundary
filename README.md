@@ -38,7 +38,7 @@ For the cross-paper map and current series links, start here:
 
 ## Scope note (gate parse-fail)
 
-`stats/stageb_all/gate_recheck_final.csv` includes the original run scope (`all` row based on 2025 pair-metric rows), while `stats/evidence/gate_recheck_all.csv` is recomputed from the bundled `stats/stageb_all/mst_pair_metrics.csv` full scope (2430 rows).
+`stats/stageb_all/gate_recheck_final.csv` includes the original run scope (`all` row based on 2025 pair-metric rows), while `stats/evidence/gate_recheck_all.csv` is recomputed from the bundled full-scope pair-metrics table in `stats/stageb_all/` (2430 rows).
 
 ## Direction rule note
 
