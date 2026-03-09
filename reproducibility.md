@@ -4,7 +4,7 @@
 
 ```bash
 cd manuscript/current
-tectonic -X compile nrr-boundary_manuscript_v19.tex
+tectonic -X compile nrr-boundary_manuscript_v20.tex
 ```
 
 ## 2) Evidence recomputation
@@ -20,7 +20,7 @@ Expected key outputs:
 - `stats/evidence/combo_rep1_vs_rep3_direction_check.csv`
 - `stats/evidence/combo_rep1_vs_rep3_direction_summary.csv`
 
-## 3) Expected values (v19 package)
+## 3) Expected values (v20 package)
 
 - Stage B `parse_fail_session_rate`: `0.005556`
 - Combo rep1 `parse_fail_session_rate`: `0.000000`
