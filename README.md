@@ -1,4 +1,4 @@
-# NRR-Boundary: Boundary Mapping for Provider-Pattern-Order Interaction
+# NRR-Boundary: Same Operators, Opposite Effects by Provider and Order
 
 NRR-Boundary is a pre-submission repository for the boundary-focused manuscript and reproducibility artifacts around Stage B and ordered-combination follow-up checks.
 
@@ -16,8 +16,8 @@ For the cross-paper map and current series links, start here:
 
 ## Current manuscript snapshot
 
-- Source: `manuscript/current/nrr-boundary_manuscript_v20.tex`
-- PDF: `manuscript/current/nrr-boundary_manuscript_v20.pdf`
+- Source: `manuscript/current/nrr-boundary_manuscript_v22.tex`
+- PDF: `manuscript/current/nrr-boundary_manuscript_v22.pdf`
 - Figures used by manuscript:
   - `manuscript/current/stageb_provider_separated_heatmaps_v9_readable.png`
   - `manuscript/current/fig_provider_separated_heatmaps_v9_readable.png`
@@ -56,8 +56,8 @@ nrr-boundary/
 |-- reproducibility.md
 |-- manuscript/
 |   `-- current/
-|       |-- nrr-boundary_manuscript_v20.tex
-|       |-- nrr-boundary_manuscript_v20.pdf
+|       |-- nrr-boundary_manuscript_v22.tex
+|       |-- nrr-boundary_manuscript_v22.pdf
 |       |-- stageb_provider_separated_heatmaps_v9_readable.png
 |       |-- fig_provider_separated_heatmaps_v9_readable.png
 |       |-- stageb_sign_flip_boundaries.png
