@@ -76,3 +76,8 @@ nrr-boundary/
 ## License
 
 CC BY 4.0. See `LICENSE`.
+
+Stable review-package entrypoints:
+- `bash scripts/build_current_manuscript.sh`
+- `bash scripts/verify_current_package.sh`
+- `bash scripts/recompute_evidence.sh`

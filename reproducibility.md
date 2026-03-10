@@ -3,16 +3,19 @@
 ## 1) Manuscript build
 
 ```bash
-cd manuscript/current
-tectonic -X compile nrr-boundary_manuscript_v22.tex
+cd <repo-root>
+bash scripts/build_current_manuscript.sh
 ```
+
+Default temp output:
+- `/tmp/nrr-boundary_current_build/nrr-boundary_manuscript_v22.pdf`
 
 ## 2) Evidence recomputation
 
 Recompute gate and rep1-vs-rep3 evidence tables from bundled processed/raw artifacts:
 
 ```bash
-python3 stats/evidence/recompute_evidence.py
+bash scripts/recompute_evidence.sh
 ```
 
 Expected key outputs:
@@ -31,3 +34,10 @@ Expected key outputs:
 ## 4) Scope caveat
 
 `stats/stageb_all/gate_recheck_final.csv` and `stats/evidence/gate_recheck_all.csv` are intentionally based on different scopes, as documented in `README.md`.
+
+## 5) Current package verification
+
+```bash
+cd <repo-root>
+bash scripts/verify_current_package.sh
+```
