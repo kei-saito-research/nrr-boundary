@@ -11,32 +11,36 @@ In the current cross-series execution order, this repository is a source/support
 
 - Build the current manuscript to temp output:
   - `bash scripts/build_current_manuscript.sh`
-  - output: `/tmp/nrr-boundary_current_build/nrr-boundary_manuscript_v23.pdf`
+  - output: `/tmp/nrr-boundary_current_build/nrr-boundary_manuscript_v24.pdf`
 - Recompute the key evidence tables from bundled artifacts:
   - `bash scripts/recompute_evidence.sh`
+- Verify the active review surface:
+  - `bash scripts/verify_active_review_surface.sh`
 - Verify the current review-package checksum manifest:
   - `bash scripts/verify_current_package.sh`
 
 ## Historical standalone package
 
-- Main TeX: `manuscript/current/nrr-boundary_manuscript_v23.tex`
-- PDF snapshot: `manuscript/current/nrr-boundary_manuscript_v23.pdf`
+- Main TeX: `manuscript/current/nrr-boundary_manuscript_v24.tex`
+- PDF snapshot: `manuscript/current/nrr-boundary_manuscript_v24.pdf`
+- Active review checksum manifest: `manuscript/checksums_active_review_surface_sha256.txt`
+- Current package checksum manifest: `manuscript/checksums_current_package_sha256.txt`
+- `manuscript/current/` is latest-only and contains only the active manuscript `.tex` / `.pdf` pair.
 - Standalone manuscript figures:
-  - `manuscript/current/stageb_provider_separated_heatmaps_v9_readable.png`
-  - `manuscript/current/fig_provider_separated_heatmaps_v9_readable.png`
-  - `manuscript/current/stageb_sign_flip_boundaries.png`
-  - `manuscript/current/fig_sign_flip_boundaries.png`
-- Checksum manifest: `manuscript/current/checksums_sha256.txt`
+  - `manuscript/figures/stageb_provider_separated_heatmaps_v9_readable.png`
+  - `manuscript/figures/fig_provider_separated_heatmaps_v9_readable.png`
+  - `manuscript/figures/stageb_sign_flip_boundaries.png`
+  - `manuscript/figures/fig_sign_flip_boundaries.png`
 
 ## Checksum policy
 
-- `manuscript/current/checksums_sha256.txt` covers the tracked files that define the
-  historical standalone package kept in `manuscript/current/`.
-- Coverage includes the standalone main `.tex` file, the committed `.pdf`, and
-  each figure asset consumed by that manuscript from `manuscript/current/`.
-- Coverage excludes `checksums_sha256.txt` itself, older manuscript versions that may
-  remain in `manuscript/current/` for local working continuity, and repo-specific
-  artifacts outside `manuscript/current/` unless a separate manifest is provided.
+- `manuscript/checksums_active_review_surface_sha256.txt` covers the active review
+  surface and is limited to the committed current `.tex` / `.pdf` pair in
+  `manuscript/current/`.
+- `manuscript/checksums_current_package_sha256.txt` covers the historical standalone
+  package needed to verify the current manuscript line, figure assets, and stable scripts.
+- Older manuscript versions are not retained in `manuscript/current/`; version history
+  is tracked through git history.
 
 ## Fixed protocol settings
 
@@ -50,10 +54,11 @@ In the current cross-series execution order, this repository is a source/support
 
 | Artifact | Command | Output |
 |---|---|---|
-| Historical standalone manuscript build | `bash scripts/build_current_manuscript.sh` | `/tmp/nrr-boundary_current_build/nrr-boundary_manuscript_v23.pdf` |
-| Historical standalone package checksum verification | `bash scripts/verify_current_package.sh` | stdout verification for `manuscript/current/checksums_sha256.txt` |
+| Historical standalone manuscript build | `bash scripts/build_current_manuscript.sh` | `/tmp/nrr-boundary_current_build/nrr-boundary_manuscript_v24.pdf` |
+| Active review surface verification | `bash scripts/verify_active_review_surface.sh` | stdout verification for `manuscript/checksums_active_review_surface_sha256.txt` plus latest-only checks on `manuscript/current/` |
+| Historical standalone package checksum verification | `bash scripts/verify_current_package.sh` | stdout verification for `manuscript/checksums_current_package_sha256.txt` |
 | Evidence recomputation | `bash scripts/recompute_evidence.sh` | `stats/evidence/gate_recheck_all.csv`, `stats/evidence/combo_rep1_vs_rep3_direction_check.csv`, `stats/evidence/combo_rep1_vs_rep3_direction_summary.csv` |
-| Historical standalone manuscript source snapshot | N/A (tracked artifact) | `manuscript/current/nrr-boundary_manuscript_v23.tex` |
+| Historical standalone manuscript source snapshot | N/A (tracked artifact) | `manuscript/current/nrr-boundary_manuscript_v24.tex` |
 
 ## Expected values (v23 package)
 

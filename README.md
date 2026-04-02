@@ -23,14 +23,16 @@ For the cross-paper map and current series links, start here:
 
 ## Historical standalone manuscript snapshot
 
-- Source: `manuscript/current/nrr-boundary_manuscript_v23.tex`
-- PDF: `manuscript/current/nrr-boundary_manuscript_v23.pdf`
+- Source: `manuscript/current/nrr-boundary_manuscript_v24.tex`
+- PDF: `manuscript/current/nrr-boundary_manuscript_v24.pdf`
+- Active review checksum manifest: `manuscript/checksums_active_review_surface_sha256.txt`
+- Current package checksum manifest: `manuscript/checksums_current_package_sha256.txt`
+- `manuscript/current/` is latest-only and keeps only the active manuscript `.tex` / `.pdf` pair.
 - Figures used by manuscript:
-  - `manuscript/current/stageb_provider_separated_heatmaps_v9_readable.png`
-  - `manuscript/current/fig_provider_separated_heatmaps_v9_readable.png`
-  - `manuscript/current/stageb_sign_flip_boundaries.png`
-  - `manuscript/current/fig_sign_flip_boundaries.png`
-- Checksum manifest: `manuscript/current/checksums_sha256.txt`
+  - `manuscript/figures/stageb_provider_separated_heatmaps_v9_readable.png`
+  - `manuscript/figures/fig_provider_separated_heatmaps_v9_readable.png`
+  - `manuscript/figures/stageb_sign_flip_boundaries.png`
+  - `manuscript/figures/fig_sign_flip_boundaries.png`
 
 ## Historical evidence bundle
 
@@ -62,14 +64,22 @@ nrr-boundary/
 |-- LICENSE
 |-- reproducibility.md
 |-- manuscript/
+|   |-- checksums_active_review_surface_sha256.txt
+|   |-- checksums_current_package_sha256.txt
+|   |-- figures/
+|   |   |-- stageb_provider_separated_heatmaps_v9_readable.png
+|   |   |-- fig_provider_separated_heatmaps_v9_readable.png
+|   |   |-- stageb_sign_flip_boundaries.png
+|   |   `-- fig_sign_flip_boundaries.png
 |   `-- current/
-|       |-- nrr-boundary_manuscript_v23.tex
-|       |-- nrr-boundary_manuscript_v23.pdf
-|       |-- stageb_provider_separated_heatmaps_v9_readable.png
-|       |-- fig_provider_separated_heatmaps_v9_readable.png
-|       |-- stageb_sign_flip_boundaries.png
-|       |-- fig_sign_flip_boundaries.png
-|       `-- checksums_sha256.txt
+|       |-- nrr-boundary_manuscript_v24.tex
+|       `-- nrr-boundary_manuscript_v24.pdf
+|-- scripts/
+|   |-- README.md
+|   |-- build_current_manuscript.sh
+|   |-- verify_active_review_surface.sh
+|   |-- verify_current_package.sh
+|   `-- recompute_evidence.sh
 `-- stats/
     |-- stageb_all/
     |-- combo_rep1_all/
@@ -86,5 +96,6 @@ CC BY 4.0. See `LICENSE`.
 
 Stable review-package entrypoints:
 - `bash scripts/build_current_manuscript.sh`
+- `bash scripts/verify_active_review_surface.sh`
 - `bash scripts/verify_current_package.sh`
 - `bash scripts/recompute_evidence.sh`

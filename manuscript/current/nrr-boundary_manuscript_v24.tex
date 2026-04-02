@@ -16,16 +16,18 @@
   top=2.5cm,
   bottom=2.5cm
 }
+\graphicspath{{../figures/}}
 
 \title{\textbf{NRR-Boundary: Same Operators, Opposite Effects by Provider and Order}}
 
 \author{
-  Kei Saito\thanks{ORCID: 0009-0006-4715-9176} \\
+  Kei Saito \\
   Independent Researcher, Japan \\
+  ORCID: 0009-0006-4715-9176 \\
   \texttt{kei.saito.research@gmail.com}
 }
 
-\date{March 2026 \\[0.5em]
+\date{April 3, 2026 \\[0.5em]
 \textit{Part of the Non-Resolution Reasoning (NRR) research program.}}
 
 \begin{document}
@@ -46,26 +48,26 @@ NRR operators are often discussed as if their quality effects were intrinsic to 
 \section{Introduction}
 \label{sec:intro}
 
-Prior NRR papers defined delayed commitment and its operational implications~\cite{saito2025nrr,saito2026phi,saito2026ime}. This manuscript asks a narrower engineering question: under fixed conditions, where do NRR operators improve quality, where do they degrade it, and where do they become non-effective?
-If NRR-Principles framed delayed commitment as a condition-bounded design logic, this paper increases the resolution of that claim by mapping where operator effects weaken, reverse, or fail to hold across provider and order conditions.
+Prior NRR papers defined delayed commitment and its operational implications~\cite{saito2025nrr,saito2026phi,saito2026ime,saito2026principles}. This manuscript asks a narrower engineering question: under fixed conditions, where do NRR operators improve quality, where do they degrade it, and where do they become non-effective?
+If NRR-Principles~\cite{saito2026principles} framed delayed commitment as a condition-bounded design logic, this paper increases the resolution of that claim by mapping where operator effects weaken, reverse, or fail to hold across provider and order conditions.
 
 This question matters because operator recommendations are increasingly reused across models as if they were portable defaults. In real deployment, however, teams often switch provider endpoints or compose multiple operators in pipelines. If effect direction changes with provider or with operator order, a seemingly benign prompt policy can become a quality or cost risk. The practical target of this paper is therefore not a universal operator ranking, but a deployable boundary map that answers: ``safe where, risky where, and under which configuration?''
 
 The same issue also affects empirical reliability. Without explicit provider/order boundaries, replication failures are easy to misclassify as random noise, while they may actually be deterministic configuration effects. A boundary map is therefore useful for both operations and science: operations teams can avoid known high-risk cells before rollout, and researchers can separate ``true disagreement'' from ``different cell, different behavior'' when comparing results across studies.
 
-In this paper, ``NRR operators'' are user-side update policies (e.g., conditional, hierarchical, delta, branch, lazy) that delay or structure commitment during iterative task updates. Delayed commitment means not forcing an early single interpretation when evidence is still unstable. This manuscript evaluates whether these operators change downstream quality signals under identical baseline-vs-pattern conditions.
+In this paper, ``NRR operators'' are user-side update policies (e.g., conditional, hierarchical, delta, branch, lazy) that delay or structure commitment during iterative task updates. This is a policy-pattern layer aligned with the pattern catalog in NRR-Principles~\cite{saito2026principles}, not the state-level or item-level $\sigma/\delta$ operator notation used in earlier NRR formalization and implementation papers. Delayed commitment means not forcing an early single interpretation when evidence is still unstable. This manuscript evaluates whether these operators change downstream quality signals under identical baseline-vs-pattern conditions.
 
 NRR is not an anti-LLM framework.
 NRR does not replace standard LLM use.
 NRR optimizes when to commit and when to defer, under explicit conditions.
 
-NRR is a derivation-and-evaluation framework, not a closed recipe.
-The operator set evaluated here is a tested set under fixed conditions, not an exhaustive set; extension claims require the same fixed protocol and boundary reporting.
-
 We therefore avoid global claims such as ``operator X is best'' and instead report a boundary map over provider, pattern, and order.
 
 \textbf{Series Consistency Statement:}
 Across the NRR series, unsupported interpretations are not injected at a fixed evidence state, hypothesis-set expansion is evidence-gated, and unobserved possibilities remain explicitly unresolved. In NRR-Boundary, this policy is operationalized through fixed paired comparisons and explicit reporting of improvements, regressions, and sign-flip boundaries.
+
+\textbf{Series Extensibility Statement:}
+NRR is a derivation-and-evaluation framework, not a closed recipe. The operator set evaluated here is a tested set under fixed conditions, not an exhaustive set; extension claims require the same fixed protocol and boundary reporting.
 
 \subsection{Contributions}
 
@@ -386,6 +388,12 @@ At the same time, conditional-first is not universally dominant for every cell. 
 
 These are mechanism hypotheses only. The current evidence supports effect observation and boundary mapping, not causal attribution of internal model architecture.
 
+Under the later non-evaluative organizing lens used elsewhere in the series, this is
+best treated as a post hoc sequencing-compatible read: some orders may preserve useful
+distinctions longer before costly downstream correction, while others flatten the state
+too early or in the wrong sequence. The present paper does not test that principle
+directly.
+
 Operationally, this suggests a staged adoption rule rather than a global recommendation: (i) run conditional-first as the default candidate, (ii) verify against the exact provider/order cell before production rollout, and (iii) retain rollback to baseline or single-operator mode when sign-flip risk is detected. This rule is conservative by design and fits the non-replacement stance of NRR: standard prompting remains the fallback, and operator composition is enabled only where the measured cell supports it.
 
 \subsection{Ceiling Effects and Metric Discriminability}
@@ -418,6 +426,8 @@ To keep claim strength aligned with evidence growth, each extension should prede
 \label{sec:conclusion}
 
 Under tested conditions, NRR operator effects are condition-dependent rather than intrinsic constants. The same operators can improve or degrade depending on provider and order. In the ordered-combination follow-up, conditional\_branch showed 0/9 sign-flip metrics while branch\_conditional showed 5/9, illustrating how reversal risk can change with order alone. The contribution of this paper is an explicit boundary map that makes those dependencies auditable and reproducible.
+Accordingly, this manuscript remains a deployment boundary map rather than a direct
+confirmatory test of the later non-evaluative organizing principle.
 
 \section{Reproducibility}
 \label{sec:repro}
@@ -442,17 +452,24 @@ decisions in this manuscript remain the sole responsibility of the author.
 \bibitem{saito2025nrr}
 K.~Saito,
 \newblock ``Non-Resolution Reasoning (NRR): A Structural Framework for Deferred Semantic Fixation,''
-\newblock \emph{arXiv preprint arXiv:2512.13478}, 2025.
+\newblock \emph{arXiv:2512.13478}, 2025.
 
 \bibitem{saito2026phi}
 K.~Saito,
 \newblock ``NRR-Phi: Text-to-State Mapping for Ambiguity Preservation in LLM Inference,''
-\newblock \emph{arXiv preprint arXiv:2601.19933}, 2026.
+\newblock \emph{arXiv:2601.19933}, 2026.
 
 \bibitem{saito2026ime}
 K.~Saito,
 \newblock ``NRR-IME: Interface Decomposition for Stable State Transitions on Stateless LLM APIs,''
-\newblock Repository preprint snapshot. \url{https://github.com/kei-saito-research/nrr-ime} (accessed 2026-03-05).
+\newblock Unpublished manuscript. Repository surface:
+\url{https://github.com/kei-saito-research/nrr-ime}.
+
+\bibitem{saito2026principles}
+K.~Saito,
+\newblock ``NRR-Principles: Computational Efficiency Through Delayed Commitment in Stateful LLM Systems,''
+\newblock Unpublished manuscript. Repository surface:
+\url{https://github.com/kei-saito-research/nrr-principles}.
 
 \bibitem{liang2022helm}
 P.~Liang et al.,
@@ -467,7 +484,7 @@ L.~Zheng et al.,
 \bibitem{dubois2024alpacaeval}
 Y.~Dubois et al.,
 \newblock ``AlpacaEval 2.0: Evaluating Language Models as Distributional Samplers,''
-\newblock \emph{arXiv preprint arXiv:2404.04475}, 2024.
+\newblock \emph{arXiv:2404.04475}, 2024.
 
 \bibitem{wei2022cot}
 J.~Wei et al.,
