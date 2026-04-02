@@ -2,25 +2,26 @@
 
 ## Scope
 
-This repository bundles the current Boundary manuscript package together with the
+This repository bundles the historical standalone Boundary manuscript package together with the
 processed/raw evidence inputs needed to recompute the key gate and rep1-vs-rep3
-evidence tables for the current manuscript line.
+evidence tables for that standalone line.
+In the current cross-series execution order, this repository is a source/support surface rather than the live editable mainline; the live authority for this zone is the separate `NRR-Patterns` repo/worktree, while `nrr-principles` remains only as historical/source continuity for the integration history.
 
 ## Stable review-package commands
 
 - Build the current manuscript to temp output:
   - `bash scripts/build_current_manuscript.sh`
-  - output: `/tmp/nrr-boundary_current_build/nrr-boundary_manuscript_v22.pdf`
+  - output: `/tmp/nrr-boundary_current_build/nrr-boundary_manuscript_v23.pdf`
 - Recompute the key evidence tables from bundled artifacts:
   - `bash scripts/recompute_evidence.sh`
 - Verify the current review-package checksum manifest:
   - `bash scripts/verify_current_package.sh`
 
-## Current review package
+## Historical standalone package
 
-- Main TeX: `manuscript/current/nrr-boundary_manuscript_v22.tex`
-- Current PDF snapshot: `manuscript/current/nrr-boundary_manuscript_v22.pdf`
-- Current manuscript figures:
+- Main TeX: `manuscript/current/nrr-boundary_manuscript_v23.tex`
+- PDF snapshot: `manuscript/current/nrr-boundary_manuscript_v23.pdf`
+- Standalone manuscript figures:
   - `manuscript/current/stageb_provider_separated_heatmaps_v9_readable.png`
   - `manuscript/current/fig_provider_separated_heatmaps_v9_readable.png`
   - `manuscript/current/stageb_sign_flip_boundaries.png`
@@ -30,9 +31,9 @@ evidence tables for the current manuscript line.
 ## Checksum policy
 
 - `manuscript/current/checksums_sha256.txt` covers the tracked files that define the
-  current review package for the latest manuscript line in `manuscript/current/`.
-- Coverage includes the current main `.tex` file, the committed current `.pdf`, and
-  each figure asset consumed by that current manuscript from `manuscript/current/`.
+  historical standalone package kept in `manuscript/current/`.
+- Coverage includes the standalone main `.tex` file, the committed `.pdf`, and
+  each figure asset consumed by that manuscript from `manuscript/current/`.
 - Coverage excludes `checksums_sha256.txt` itself, older manuscript versions that may
   remain in `manuscript/current/` for local working continuity, and repo-specific
   artifacts outside `manuscript/current/` unless a separate manifest is provided.
@@ -49,12 +50,12 @@ evidence tables for the current manuscript line.
 
 | Artifact | Command | Output |
 |---|---|---|
-| Current manuscript build | `bash scripts/build_current_manuscript.sh` | `/tmp/nrr-boundary_current_build/nrr-boundary_manuscript_v22.pdf` |
-| Current package checksum verification | `bash scripts/verify_current_package.sh` | stdout verification for `manuscript/current/checksums_sha256.txt` |
+| Historical standalone manuscript build | `bash scripts/build_current_manuscript.sh` | `/tmp/nrr-boundary_current_build/nrr-boundary_manuscript_v23.pdf` |
+| Historical standalone package checksum verification | `bash scripts/verify_current_package.sh` | stdout verification for `manuscript/current/checksums_sha256.txt` |
 | Evidence recomputation | `bash scripts/recompute_evidence.sh` | `stats/evidence/gate_recheck_all.csv`, `stats/evidence/combo_rep1_vs_rep3_direction_check.csv`, `stats/evidence/combo_rep1_vs_rep3_direction_summary.csv` |
-| Current manuscript source snapshot | N/A (tracked artifact) | `manuscript/current/nrr-boundary_manuscript_v22.tex` |
+| Historical standalone manuscript source snapshot | N/A (tracked artifact) | `manuscript/current/nrr-boundary_manuscript_v23.tex` |
 
-## Expected values (v22 package)
+## Expected values (v23 package)
 
 - Stage B `parse_fail_session_rate`: `0.005556`
 - Combo rep1 `parse_fail_session_rate`: `0.000000`

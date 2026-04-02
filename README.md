@@ -1,6 +1,7 @@
 # NRR-Boundary: Same Operators, Opposite Effects by Provider and Order
 
-NRR-Boundary is a pre-submission repository for the boundary-focused manuscript and reproducibility artifacts around Stage B and ordered-combination follow-up checks.
+NRR-Boundary is a historical/source repository for the older standalone Boundary manuscript and the reproducibility artifacts around Stage B and ordered-combination follow-up checks.
+In the current cross-series execution order, this repository is not the live mainline; its evidence is carried forward as a supporting/package-first surface around `NRR-Patterns`, the current authority for integrated `paper7`.
 
 NRR is not an anti-LLM framework.
 NRR does not replace standard LLM use.
@@ -9,15 +10,21 @@ Series numbering policy: `paper3` is permanently skipped and never reused.
 
 Part of the Non-Resolution Reasoning (NRR) research program.
 
+Mainline note:
+- this standalone Boundary repository is not the current editable mainline
+- the current authority for this zone is the separate `NRR-Patterns` repo/worktree
+- `nrr-principles` remains only as historical/source continuity for the integration history
+- treat this repository as a historical/source evidence surface unless a thread explicitly reopens it
+
 ## NRR Series Hub (Start here)
 
 For the cross-paper map and current series links, start here:
 - [NRR Series Hub](https://github.com/kei-saito-research/nrr-series-hub)
 
-## Current manuscript snapshot
+## Historical standalone manuscript snapshot
 
-- Source: `manuscript/current/nrr-boundary_manuscript_v22.tex`
-- PDF: `manuscript/current/nrr-boundary_manuscript_v22.pdf`
+- Source: `manuscript/current/nrr-boundary_manuscript_v23.tex`
+- PDF: `manuscript/current/nrr-boundary_manuscript_v23.pdf`
 - Figures used by manuscript:
   - `manuscript/current/stageb_provider_separated_heatmaps_v9_readable.png`
   - `manuscript/current/fig_provider_separated_heatmaps_v9_readable.png`
@@ -25,7 +32,7 @@ For the cross-paper map and current series links, start here:
   - `manuscript/current/fig_sign_flip_boundaries.png`
 - Checksum manifest: `manuscript/current/checksums_sha256.txt`
 
-## Evidence bundle
+## Historical evidence bundle
 
 - Stage B processed metrics: `stats/stageb_all/`
 - Combo rep1 processed metrics: `stats/combo_rep1_all/`
@@ -56,8 +63,8 @@ nrr-boundary/
 |-- reproducibility.md
 |-- manuscript/
 |   `-- current/
-|       |-- nrr-boundary_manuscript_v22.tex
-|       |-- nrr-boundary_manuscript_v22.pdf
+|       |-- nrr-boundary_manuscript_v23.tex
+|       |-- nrr-boundary_manuscript_v23.pdf
 |       |-- stageb_provider_separated_heatmaps_v9_readable.png
 |       |-- fig_provider_separated_heatmaps_v9_readable.png
 |       |-- stageb_sign_flip_boundaries.png
